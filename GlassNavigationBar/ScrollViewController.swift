@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ScrollViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
