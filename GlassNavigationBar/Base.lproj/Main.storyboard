@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gUx-fh-rx7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Glass Navigation Controller-->
+        <scene sceneID="w7u-cz-OM8">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gUx-fh-rx7" customClass="GlassNavigationController" customModule="GlassNavigationBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdX-NO-2AM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RhW-lC-YKj" kind="relationship" relationship="rootViewController" id="pYz-dR-hYz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZU-MJ-muB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="151.57421289355324"/>
+        </scene>
+        <!--GlassNavigation-->
+        <scene sceneID="Zmi-wf-175">
+            <objects>
+                <viewController id="RhW-lC-YKj" customClass="ScrollViewController" customModule="GlassNavigationBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zfh-d8-ze7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="my3-W2-xrD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeg-k5-OhN">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="1500"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA0-WH-8pb">
+                                                <rect key="frame" x="142" y="1450" width="90" height="34"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="xxA-zq-Pro"/>
+                                                </constraints>
+                                                <state key="normal" title="Go To Top">
+                                                    <color key="titleColor" red="0.32156862749999998" green="0.28627450980000002" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="topBtnTapped:" destination="RhW-lC-YKj" eventType="touchUpInside" id="u62-gT-CcT"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olia-gozha-377160-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="mPD-or-Uwf">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="598.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mPD-or-Uwf" secondAttribute="height" multiplier="375:600" id="R4Z-cX-ttd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmQ-8L-blv">
+                                                <rect key="frame" x="127" y="614.5" width="120" height="34"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="Y5A-jP-vs6"/>
+                                                </constraints>
+                                                <state key="normal" title="Go To Bottom">
+                                                    <color key="titleColor" red="0.32156862749999998" green="0.28627450980000002" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="bottomBtnTapped:" destination="RhW-lC-YKj" eventType="touchUpInside" id="CSw-cc-mL2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NA0-WH-8pb" secondAttribute="bottom" constant="16" id="5u5-jW-RX8"/>
+                                            <constraint firstItem="mPD-or-Uwf" firstAttribute="top" secondItem="zeg-k5-OhN" secondAttribute="top" id="8xO-F4-Awr"/>
+                                            <constraint firstAttribute="height" constant="1500" id="9Lh-wG-jdV"/>
+                                            <constraint firstItem="LmQ-8L-blv" firstAttribute="top" secondItem="mPD-or-Uwf" secondAttribute="bottom" constant="16" id="CCy-kv-COO"/>
+                                            <constraint firstAttribute="trailing" secondItem="mPD-or-Uwf" secondAttribute="trailing" id="hCk-Q8-pdh"/>
+                                            <constraint firstItem="mPD-or-Uwf" firstAttribute="leading" secondItem="zeg-k5-OhN" secondAttribute="leading" id="pOr-cL-eX0"/>
+                                            <constraint firstItem="NA0-WH-8pb" firstAttribute="centerX" secondItem="zeg-k5-OhN" secondAttribute="centerX" id="vOK-8T-RxE"/>
+                                            <constraint firstItem="LmQ-8L-blv" firstAttribute="centerX" secondItem="zeg-k5-OhN" secondAttribute="centerX" id="zgR-Nu-Hfx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zeg-k5-OhN" secondAttribute="trailing" id="LH6-EU-dnD"/>
+                                    <constraint firstAttribute="bottom" secondItem="zeg-k5-OhN" secondAttribute="bottom" id="MPa-Kj-yl7"/>
+                                    <constraint firstItem="zeg-k5-OhN" firstAttribute="top" secondItem="my3-W2-xrD" secondAttribute="top" id="lDm-ol-zpk"/>
+                                    <constraint firstItem="zeg-k5-OhN" firstAttribute="leading" secondItem="my3-W2-xrD" secondAttribute="leading" id="uye-q4-TIA"/>
+                                    <constraint firstItem="zeg-k5-OhN" firstAttribute="centerX" secondItem="my3-W2-xrD" secondAttribute="centerX" id="w0P-bx-iaf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="my3-W2-xrD" firstAttribute="leading" secondItem="Zfh-d8-ze7" secondAttribute="leading" id="aUB-Xr-OHV"/>
+                            <constraint firstAttribute="trailing" secondItem="my3-W2-xrD" secondAttribute="trailing" id="bEm-2L-Y31"/>
+                            <constraint firstItem="my3-W2-xrD" firstAttribute="bottom" secondItem="6Sb-lK-w7r" secondAttribute="bottom" id="fJQ-3T-8Tf"/>
+                            <constraint firstItem="my3-W2-xrD" firstAttribute="top" secondItem="Zfh-d8-ze7" secondAttribute="top" id="ivj-Ty-pOa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Sb-lK-w7r"/>
                     </view>
+                    <navigationItem key="navigationItem" title="GlassNavigation" id="XVs-O1-chx"/>
+                    <connections>
+                        <outlet property="bottomButton" destination="LmQ-8L-blv" id="Zhh-RP-NlO"/>
+                        <outlet property="scrollView" destination="my3-W2-xrD" id="baM-ca-2Yx"/>
+                        <outlet property="topButton" destination="NA0-WH-8pb" id="ZH9-Jk-10R"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgT-Hh-JOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="914" y="152"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="olia-gozha-377160-unsplash" width="3113" height="3800"/>
+    </resources>
 </document>
