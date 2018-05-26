@@ -11,6 +11,11 @@
 
 ## Demo
 
+| Demo1 | Demo2 |
+|-------------------------|--------------------------------------------|
+|![glassNav](./images/glassNav.gif)|![glassNav](./images/glassNav2.gif)|
+
+
 ## Installation
 
 ### CocoaPods
