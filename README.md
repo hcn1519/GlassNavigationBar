@@ -17,7 +17,7 @@
     <th>Demo2</th>
   </tr>
   <tr>
-    <td><img style="max-width: 200px" src="./images/gNav1.gif"></td>
+    <td><img style="max-width: 200px" src="./images/gNav2.gif"></td>
     <td><img style="max-width: 200px" src="./images/gNav1.gif"></td>
   </tr>
 </table>
