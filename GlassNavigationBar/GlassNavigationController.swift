@@ -24,14 +24,14 @@ open class GlassNavigationController: UINavigationController {
         }
     }
 
-    open var hideBottomNavigationLine: Bool {
+    open var hideNavigationBottomLine: Bool {
         get {
-            if let hairLine = self.navigationBar.hairlineImageView {
-                return hairLine.isHidden
-            }
-            return false
+            return self.navigationBar.hairlineImageView?.isHidden ?? false
         } set {
             self.navigationBar.hairlineImageView?.isHidden = newValue
+            if !newValue {
+                self.navigationBar.shadowImage = nil
+            }
         }
     }
 
@@ -63,8 +63,8 @@ open class GlassNavigationController: UINavigationController {
                                contentHeight: CGFloat? = nil) {
         self.color = color ?? .white
         self.navigationBar.tintColor = tintColor ?? .black
-        self.hideBottomNavigationLine = hideBottomHairline ?? false
         self.isTransparent = isTransparent
+        self.hideNavigationBottomLine = hideBottomHairline ?? true
 
         self.contentHeight = {
             let navBarHeight: CGFloat = {
@@ -112,7 +112,7 @@ open class GlassNavigationController: UINavigationController {
 
 extension GlassNavigationController: UIScrollViewDelegate {
 
-    func adjustNavigationAlpha(scrollView: UIScrollView) {
+    private func adjustNavigationAlpha(scrollView: UIScrollView) {
         let maxHeight = contentHeight ?? scrollView.contentSize.height
 
         let contentOffsetY: CGFloat = {
@@ -138,8 +138,6 @@ extension GlassNavigationController: UIScrollViewDelegate {
                 return alpha
             }
         }()
-        debugPrint(contentOffsetY)
-        debugPrint(alpha)
 
         let contentInsetTop = scrollView.contentInset.top * -1
 
@@ -154,7 +152,7 @@ extension GlassNavigationController: UIScrollViewDelegate {
         adjustNavigationAlpha(scrollView: scrollView)
     }
 
-    func scrollingBackground(color: UIColor, isTranslucent: Bool) {
+    private func scrollingBackground(color: UIColor, isTranslucent: Bool) {
         setBackground(color: color)
         self.navigationBar.isTranslucent = isTranslucent
     }
@@ -180,7 +178,7 @@ extension GlassNavigationController {
         return UIImage()
     }
 
-    func setTransparent(_ isTransParent: Bool) {
+    private func setTransparent(_ isTransParent: Bool) {
         if isTransParent {
             self.navigationBar.isTranslucent = true
             self.navigationBar.setBackgroundImage(UIImage(), for: .default)

@@ -43,7 +43,6 @@ class ScrollViewController: UIViewController {
         if let navbarController = self.navigationController as? GlassNavigationController {
             navbarController.setNavbarTheme(isTransparent: true, scrollView: scrollView, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),
                                             tintColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), hideBottomHairline: true, contentHeight: 600)
-            navbarController.setTitleColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
         }
     }
 
