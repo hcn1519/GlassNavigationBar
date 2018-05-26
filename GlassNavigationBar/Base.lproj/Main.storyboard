@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,10 +40,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeg-k5-OhN">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-U3-0Gg">
-                                                <rect key="frame" x="97" y="664.5" width="180" height="34"/>
+                                                <rect key="frame" x="97.5" y="666" width="180" height="34"/>
                                                 <color key="backgroundColor" red="0.32156862749999998" green="0.28627450980000002" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="4PY-Pw-S8P"/>
@@ -57,7 +56,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA0-WH-8pb">
-                                                <rect key="frame" x="142" y="1450" width="90" height="34"/>
+                                                <rect key="frame" x="142.5" y="1450" width="90" height="34"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="xxA-zq-Pro"/>
@@ -70,7 +69,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkG-c2-TH4">
-                                                <rect key="frame" x="97" y="1400" width="180" height="34"/>
+                                                <rect key="frame" x="97.5" y="1400" width="180" height="34"/>
                                                 <color key="backgroundColor" red="0.32156862749999998" green="0.28627450980000002" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="qOB-ze-tEh"/>
@@ -83,13 +82,13 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olia-gozha-377160-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="mPD-or-Uwf">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="598.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="mPD-or-Uwf" secondAttribute="height" multiplier="375:600" id="R4Z-cX-ttd"/>
+                                                    <constraint firstAttribute="height" constant="600" id="ASj-hD-bgi"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmQ-8L-blv">
-                                                <rect key="frame" x="127" y="614.5" width="120" height="34"/>
+                                                <rect key="frame" x="127.5" y="616" width="120" height="34"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Y5A-jP-vs6"/>
@@ -211,7 +210,6 @@
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90588235289999997" green="0.34509803919999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="oE8-d0-ADw" firstAttribute="top" secondItem="DYb-8x-RMF" secondAttribute="top" id="fIZ-1n-4lv"/>
                             <constraint firstItem="xrB-ic-bUd" firstAttribute="trailing" secondItem="oE8-d0-ADw" secondAttribute="trailing" id="raV-Gw-vzO"/>
