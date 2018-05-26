@@ -11,7 +11,6 @@
 
 ## Demo
 
-<<<<<<< HEAD
 <table class="tg">
   <tr>
     <th>Demo1</th>
@@ -19,19 +18,13 @@
   </tr>
   <tr>
     <td>
-      <img style="max-width: 250px" src="./images/glassNav_720.gif">
+      <img style="max-width: 200px" src="./images/glassNav_720.gif">
     </td>
     <td>
-      <img style="max-width: 250px" src="./images/glassNav2_720.gif">
+      <img style="max-width: 200px" src="./images/glassNav2_720.gif">
     </td>
   </tr>
 </table>
-=======
-| Demo1 | Demo2 |
-|-------------------------|--------------------------------------------|
-|![glassNav](./images/glassNav.gif)|![glassNav](./images/glassNav2.gif)|
-
->>>>>>> b9073752f64374771ae4aab19e51cac08e647438
 
 ## Installation
 
