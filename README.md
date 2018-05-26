@@ -11,6 +11,7 @@
 
 ## Demo
 
+<<<<<<< HEAD
 <table class="tg">
   <tr>
     <th>Demo1</th>
@@ -25,6 +26,12 @@
     </td>
   </tr>
 </table>
+=======
+| Demo1 | Demo2 |
+|-------------------------|--------------------------------------------|
+|![glassNav](./images/glassNav.gif)|![glassNav](./images/glassNav2.gif)|
+
+>>>>>>> b9073752f64374771ae4aab19e51cac08e647438
 
 ## Installation
 
