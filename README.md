@@ -1,8 +1,10 @@
-![GlassNavigation](images/glassNavigationLogo.png)
+<p align="center">
+  <img width="430" src="./images/glassNavigation.png">
+</p>
 
 #  Glass Navigation Bar
 
-[![Swift 4.0](https://img.shields.io/badge/Swift-4.1-%23FB613C.svg)](https://developer.apple.com/swift/)
+[![Swift 4.1](https://img.shields.io/badge/Swift-4.1-%23FB613C.svg)](https://developer.apple.com/swift/)
 
 
 ## Feature
