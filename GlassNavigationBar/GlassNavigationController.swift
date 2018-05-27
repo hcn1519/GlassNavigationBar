@@ -67,6 +67,8 @@ open class GlassNavigationController: UINavigationController {
         self.hideNavigationBottomLine = hideBottomHairline ?? true
 
         self.contentHeight = {
+            guard let height = contentHeight else { return nil }
+
             let navBarHeight: CGFloat = {
                 if #available(iOS 11.0, *) {
                     if self.navigationBar.prefersLargeTitles {
@@ -77,10 +79,8 @@ open class GlassNavigationController: UINavigationController {
             }()
 
             let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
-            if let height = contentHeight {
-                return height - navBarHeight - statusBarHeight
-            }
-            return nil
+
+            return height - navBarHeight - statusBarHeight
         }()
 
         if let scrollView = scrollView {
@@ -110,24 +110,24 @@ open class GlassNavigationController: UINavigationController {
     }
 }
 
+// MARK: UIScrollViewDelegate
+
 extension GlassNavigationController: UIScrollViewDelegate {
 
-    private func adjustNavigationAlpha(scrollView: UIScrollView) {
-        let maxHeight = contentHeight ?? scrollView.contentSize.height
+    public func adjustNavigationAlpha(scrollView: UIScrollView) {
+        func scrollingBackground(color: UIColor, isTranslucent: Bool) {
+            setBackground(color: color)
+            self.navigationBar.isTranslucent = isTranslucent
+        }
 
-        let contentOffsetY: CGFloat = {
-            if #available(iOS 11.0, *) {
-                return scrollView.contentOffset.y
-            }
-            return scrollView.contentOffset.y
-        }()
+        let offsetY = scrollView.contentOffset.y
 
         let alpha: CGFloat = {
             if let maxHeight = contentHeight {
-                return contentOffsetY / maxHeight
+                return offsetY / maxHeight
             }
 
-            let alpha = scrollView.contentOffset.y / (maxHeight - scrollView.frame.size.height)
+            let alpha = offsetY / (scrollView.contentSize.height - scrollView.frame.size.height)
 
             switch alpha {
             case _ where alpha < 0:
@@ -141,7 +141,7 @@ extension GlassNavigationController: UIScrollViewDelegate {
 
         let contentInsetTop = scrollView.contentInset.top * -1
 
-        if contentOffsetY > contentInsetTop {
+        if offsetY > contentInsetTop {
             scrollingBackground(color: self.color.withAlphaComponent(alpha), isTranslucent: alpha < 1.0)
         } else {
             scrollingBackground(color: self.color.withAlphaComponent(0.0), isTranslucent: true)
@@ -152,15 +152,24 @@ extension GlassNavigationController: UIScrollViewDelegate {
         adjustNavigationAlpha(scrollView: scrollView)
     }
 
-    private func scrollingBackground(color: UIColor, isTranslucent: Bool) {
-        setBackground(color: color)
-        self.navigationBar.isTranslucent = isTranslucent
-    }
 }
 
 extension GlassNavigationController {
+
     public func setBackground(color: UIColor) {
         self.navigationBar.setBackgroundImage(setImageFrom(color: color), for: UIBarMetrics.default)
+    }
+
+    public func setNavBarToDefault() {
+        if #available(iOS 11.0, *) {
+            self.navigationBar.prefersLargeTitles = false
+        }
+        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationBar.isTranslucent = true
+        self.navigationBar.tintColor = nil
+        self.navigationBar.barTintColor = nil
+        self.navigationBar.hairlineImageView?.isHidden = false
+        self.navigationBar.setBackgroundImage(setImageFrom(color: #colorLiteral(red: 0.968627451, green: 0.968627451, blue: 0.968627451, alpha: 1)), for: .default)
     }
 
     private func setImageFrom(color: UIColor) -> UIImage {
@@ -189,17 +198,6 @@ extension GlassNavigationController {
         }
     }
 
-    public func setNavBarToDefault() {
-        if #available(iOS 11.0, *) {
-            self.navigationBar.prefersLargeTitles = false
-        }
-        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationBar.isTranslucent = true
-        self.navigationBar.tintColor = nil
-        self.navigationBar.barTintColor = nil
-        self.navigationBar.hairlineImageView?.isHidden = false
-        self.navigationBar.setBackgroundImage(setImageFrom(color: #colorLiteral(red: 0.968627451, green: 0.968627451, blue: 0.968627451, alpha: 1)), for: .default)
-    }
 }
 
 // MARK: Remove HairLine
