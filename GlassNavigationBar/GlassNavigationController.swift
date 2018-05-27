@@ -58,7 +58,7 @@ open class GlassNavigationController: UINavigationController {
         viewController.extendedLayoutIncludesOpaqueBars = true
     }
     
-    public func setNavbarTheme(isTransparent: Bool, scrollView: UIScrollView? = nil, color: UIColor? = nil,
+    public func setNavbarTheme(isTransparent: Bool, scrollView: UIScrollView, color: UIColor? = nil,
                                tintColor: UIColor? = nil, hideBottomHairline: Bool? = nil,
                                contentHeight: CGFloat? = nil) {
         self.color = color ?? .white
@@ -83,9 +83,7 @@ open class GlassNavigationController: UINavigationController {
             return height - navBarHeight - statusBarHeight
         }()
 
-        if let scrollView = scrollView {
-            adjustNavigationAlpha(scrollView: scrollView)
-        }
+        adjustNavigationAlpha(scrollView: scrollView)
     }
 
     public func scrollViewAboveNavigation(scrollView: UIScrollView) {
