@@ -20,7 +20,6 @@ class CollectionViewController: UIViewController {
 
         if let navbarController = self.navigationController as? GlassNavigationController {
             navbarController.extendedLayoutIncludesOpaqueBars(self)
-            navbarController.delegate = self
         }
     }
 
@@ -32,7 +31,7 @@ class CollectionViewController: UIViewController {
         setNavbar()
     }
 
-    func setNavbar() {
+    private func setNavbar() {
         if let navbarController = self.navigationController as? GlassNavigationController {
             navbarController.setNavbarTheme(isTransparent: true, scrollView: collectionView, color: #colorLiteral(red: 0.2431372549, green: 0.1529411765, blue: 0.137254902, alpha: 1),
                                             tintColor: #colorLiteral(red: 1, green: 0.568627451, blue: 0, alpha: 1), hideBottomHairline: false, contentHeight: 600)
@@ -48,11 +47,7 @@ extension CollectionViewController: UIScrollViewDelegate {
     }
 }
 
-extension CollectionViewController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        setNavbar()
-    }
-}
+// MARK: UICollectionViewDataSource
 
 extension CollectionViewController: UICollectionViewDataSource {
 
@@ -69,6 +64,8 @@ extension CollectionViewController: UICollectionViewDataSource {
         return UICollectionViewCell()
     }
 }
+
+// MARK: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 
 extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
