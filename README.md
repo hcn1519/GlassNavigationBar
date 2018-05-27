@@ -58,7 +58,9 @@ $ pod install
 * If you use `storyboard`, Set the class of `navigationController` as `GlassNavigationController`.
 * If you create your navigationController programatically, use `GlassNavigationController` instance instad of `UINavigationController` instance.
 
-2. Use `setNavbarTheme(isTransparent: scrollView:)` for your navigationBar basic theme.
+2. You need to pin `ScrollView` Top Constraint to it's `Superview`(make sure it is not `safeArea`)
+
+3. Use `setNavbarTheme(isTransparent: scrollView:)` for your navigationBar basic theme.
 
 ```swift
 override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +72,7 @@ override func viewWillAppear(_ animated: Bool) {
 }
 ```
 
-3. Make your scrollview to put on your navigationBar.
+4. Make your scrollview to put on your navigationBar.
 
 ```swift
 
@@ -83,10 +85,9 @@ override func viewDidLoad() {
         navbarController.scrollViewAboveNavigation(scrollView: scrollView)
     }
 }
-
 ```
 
-4. Set `UIScrollViewDelegate` to change your navigationBar's background color based on scroll.
+5. Set `UIScrollViewDelegate` to change your navigationBar's background color based on scroll.
 
 ```swift
 extension ScrollViewController: UIScrollViewDelegate {
@@ -98,7 +99,16 @@ extension ScrollViewController: UIScrollViewDelegate {
 }
 ```
 
-That's it. Build and run your app! 🎉🎉
+That's it. Build and run your app! 🎉🎉 If you don't know how to do this, open up our demo project and see it.
+
+---
+
+### Set NavigationBar theme
+
+### Put your scrollView on navigationBar
+
+### Change alpha of navigationBar's color
+
 
 ### Property of GlassNavigationController
 
@@ -121,13 +131,15 @@ open var color: UIColor
 open var isTransparent: Bool
 ```
 
-`isTransparent` is for your navigationBar's transparency. If you set `isTransparent` to `true`, your navigationBar become transparent.
+`isTransparent` let you handle your navigationBar's transparency. If you set `isTransparent` to `true`, your navigationBar become transparent.
 
 ```swift
 open var hideNavigationBottomLine: Bool
 ```
 
 `UINavigationBar` has default bottomline. If you want to hide it, `hideNavigationBottomLine` to `true`.
+
+---
 
 
 ![scrollViewAbove](./images/scrollviewAbove.png)
