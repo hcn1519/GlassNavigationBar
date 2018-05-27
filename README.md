@@ -105,7 +105,21 @@ That's it. Build and run your app! 🎉🎉 If you don't know how to do this, op
 
 ### Set NavigationBar theme
 
-### Put your scrollView on navigationBar
+### Put your scrollView above navigationBar
+
+Apple's screen guide has been revised since the iPhone X was released. Apple recommend us to use `safeArea` for background autolayout. However, we often have to put our scroll view on the status bar. To do this, you first need to pin your `scrollView` top constraint to `superview` top constarint.(not `safeArea`). Then just use `adjustNavigationAlpha(scrollView:)`.
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    if let navbarController = self.navigationController as? GlassNavigationController {
+        navbarController.scrollViewAboveNavigation(scrollView: scrollView)
+    }
+}
+```
+![scrollViewAbove](./images/scrollviewAbove.png)
+
+Now Your content will start from top edge of iphone screen.
 
 ### Change alpha of navigationBar's color
 
@@ -142,5 +156,4 @@ open var hideNavigationBottomLine: Bool
 ---
 
 
-![scrollViewAbove](./images/scrollviewAbove.png)
 ## License
