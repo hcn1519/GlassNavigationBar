@@ -56,7 +56,7 @@ $ pod install
 1. Make your `navigationController` use `GlassNavigationController` instead of `UINavigationController`.
 
 * If you use `storyboard`, Set the class of `navigationController` as `GlassNavigationController`.
-* If you Create your navigationController programatically, use `GlassNavigationController` instad of `UINavigationController`.
+* If you create your navigationController programatically, use `GlassNavigationController` instance instad of `UINavigationController` instance.
 
 2. Use `setNavbarTheme(isTransparent: scrollView:)` for your navigationBar basic theme.
 
@@ -99,6 +99,36 @@ extension ScrollViewController: UIScrollViewDelegate {
 ```
 
 That's it. Build and run your app! 🎉🎉
+
+### Property of GlassNavigationController
+
+So far `GlassNavigationController` has 4 properties for you to use.
+
+```swift
+open var contentHeight: CGFloat?
+```
+`contentHeight` is the maximum height for navigation bar's alpha value. For example, if you set your `contentHeight` to 600, your navigationBar's alpha will be `1`, when your `scrollView.contentOffset.y` is 600.
+
+If you don't set `contentHeight`, the default value will be `scrollView.contentSize.height`.
+
+```swift
+open var color: UIColor
+```
+
+`color` is for your navigationBar's background color.
+
+```swift
+open var isTransparent: Bool
+```
+
+`isTransparent` is for your navigationBar's transparency. If you set `isTransparent` to `true`, your navigationBar become transparent.
+
+```swift
+open var hideNavigationBottomLine: Bool
+```
+
+`UINavigationBar` has default bottomline. If you want to hide it, `hideNavigationBottomLine` to `true`.
+
 
 ![scrollViewAbove](./images/scrollviewAbove.png)
 ## License
