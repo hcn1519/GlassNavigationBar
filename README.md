@@ -105,9 +105,25 @@ That's it. Build and run your app! 🎉🎉 If you don't know how to do this, op
 
 ### Set NavigationBar theme
 
+You can set navigationBar's theme by using  `setNavbarTheme(isTransparent: scrollView:)`.
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    if let navbarController = self.navigationController as? GlassNavigationController {
+        navbarController.setNavbarTheme(isTransparent: true, scrollView: self.scrollView)
+        
+        // With some options.
+        navbarController.setNavbarTheme(isTransparent: true, scrollView: self.scrollView, color: .white,
+        tintColor: .black, hideBottomHairline: true, contentHeight: 600)
+    }
+}
+```
+
 ### Put your scrollView above navigationBar
 
-Apple's screen guide has been revised since the iPhone X was released. Apple recommend us to use `safeArea` for background autolayout. However, we often have to put our scroll view on the status bar. To do this, you first need to pin your `scrollView` top constraint to `superview` top constarint.(not `safeArea`). Then just use `adjustNavigationAlpha(scrollView:)`.
+Apple's screen guide has been revised since the iPhone X was released. Apple recommends us to use `safeArea` for background autolayout. However, we often have to put our scroll view on the status bar. To do this, you first need to pin your `scrollView` top constraint to `superview` top constarint.(not `safeArea`). Then just use `adjustNavigationAlpha(scrollView:)`.
 
 ```swift
 override func viewDidLoad() {
@@ -121,10 +137,35 @@ override func viewDidLoad() {
 
 Now Your content will start from top edge of iphone screen.
 
-### Change alpha of navigationBar's color
 
+### Change Alpha of navigationBar's color based on ScrollView's content offset
 
-### Property of GlassNavigationController
+`GlassNavigationController` use `UIScrollViewDelegate` to change your navigationBar's background color.
+
+1. Set `UIScrollViewDelegate` for your ViewController
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    scrollView.delegate = self
+}
+```
+
+2. Inside `scrollViewDidScroll` do like this.
+
+```swift
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if let navbarController = self.navigationController as? GlassNavigationController {
+            navbarController.scrollViewDidScroll(scrollView)
+        }
+    }
+}
+```
+
+⚠️ We highly recommend you to use this feature with `setNavbarTheme()` function, or set navigationBar's theme on `viewWillAppear`. If you do not, we can not guarantee that the theme of the navigation bar will remain the same when you return to the other screen and come back.
+
+### Property Of GlassNavigationController
 
 So far `GlassNavigationController` has 4 properties for you to use.
 
