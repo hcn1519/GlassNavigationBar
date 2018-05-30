@@ -12,7 +12,8 @@
 
 ## Feature
 
-*  Adjust your NavigationBar's Transparency, while scrolling 
+*  Adjust your NavigationBar's Transparency, while scrolling
+*  Allow to put your ScrollView above status bar
 
 ## Demo
 
