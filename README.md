@@ -12,7 +12,8 @@
 
 ## Feature
 
-*  Adjust your NavigationBar's Transparency, while scrolling 
+*  Adjust your NavigationBar's Transparency, while scrolling
+*  Allow to put your ScrollView above status bar
 
 ## Demo
 
@@ -117,7 +118,7 @@ override func viewWillAppear(_ animated: Bool) {
 
     if let navbarController = self.navigationController as? GlassNavigationController {
         navbarController.setNavbarTheme(isTransparent: true, scrollView: self.scrollView)
-        
+
         // With some options.
         navbarController.setNavbarTheme(isTransparent: true, scrollView: self.scrollView, color: .white,
         tintColor: .black, hideBottomHairline: true, contentHeight: 600)
@@ -125,7 +126,7 @@ override func viewWillAppear(_ animated: Bool) {
 }
 ```
 
-`setNavbarTheme(isTransparent: scrollView:)` offer you to set some otehr options we have. See Information about these properties(https://github.com/hcn1519/GlassNavigationBar#property-of-glassNavigationController).
+`setNavbarTheme(isTransparent: scrollView:)` offer you to set some otehr options we have. See Information about these [properties](https://github.com/hcn1519/GlassNavigationBar#property-of-glassnavigationcontroller).
 
 ### Put your scrollView above navigationBar
 
