@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7E09923120B15B7C00AB7C71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09923020B15B7C00AB7C71 /* AppDelegate.swift */; };
-		7E09923320B15B7C00AB7C71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09923220B15B7C00AB7C71 /* ViewController.swift */; };
+		7E09923320B15B7C00AB7C71 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09923220B15B7C00AB7C71 /* ScrollViewController.swift */; };
 		7E09923620B15B7C00AB7C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09923420B15B7C00AB7C71 /* Main.storyboard */; };
 		7E09923820B15B7D00AB7C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E09923720B15B7D00AB7C71 /* Assets.xcassets */; };
 		7E09923B20B15B7D00AB7C71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09923920B15B7D00AB7C71 /* LaunchScreen.storyboard */; };
 		7E09924620B15B7D00AB7C71 /* GlassNavigationBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09924520B15B7D00AB7C71 /* GlassNavigationBarTests.swift */; };
+		7E09925220B15C1400AB7C71 /* GlassNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09925120B15C1400AB7C71 /* GlassNavigationController.swift */; };
+		7E09925720B1B82900AB7C71 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09925620B1B82900AB7C71 /* CollectionViewController.swift */; };
+		7E09925920B1BAC900AB7C71 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09925820B1BAC900AB7C71 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,7 @@
 /* Begin PBXFileReference section */
 		7E09922D20B15B7C00AB7C71 /* GlassNavigationBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlassNavigationBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E09923020B15B7C00AB7C71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E09923220B15B7C00AB7C71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E09923220B15B7C00AB7C71 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		7E09923520B15B7C00AB7C71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E09923720B15B7D00AB7C71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E09923A20B15B7D00AB7C71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +40,9 @@
 		7E09924520B15B7D00AB7C71 /* GlassNavigationBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassNavigationBarTests.swift; sourceTree = "<group>"; };
 		7E09924720B15B7D00AB7C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E09925020B15B9D00AB7C71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7E09925120B15C1400AB7C71 /* GlassNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassNavigationController.swift; sourceTree = "<group>"; };
+		7E09925620B1B82900AB7C71 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		7E09925820B1BAC900AB7C71 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +86,14 @@
 			isa = PBXGroup;
 			children = (
 				7E09923020B15B7C00AB7C71 /* AppDelegate.swift */,
-				7E09923220B15B7C00AB7C71 /* ViewController.swift */,
+				7E09923220B15B7C00AB7C71 /* ScrollViewController.swift */,
+				7E09925620B1B82900AB7C71 /* CollectionViewController.swift */,
+				7E09925820B1BAC900AB7C71 /* CollectionViewCell.swift */,
 				7E09923420B15B7C00AB7C71 /* Main.storyboard */,
 				7E09923720B15B7D00AB7C71 /* Assets.xcassets */,
 				7E09923920B15B7D00AB7C71 /* LaunchScreen.storyboard */,
 				7E09923C20B15B7D00AB7C71 /* Info.plist */,
+				7E09925120B15C1400AB7C71 /* GlassNavigationController.swift */,
 			);
 			path = GlassNavigationBar;
 			sourceTree = "<group>";
@@ -108,6 +117,7 @@
 				7E09922920B15B7C00AB7C71 /* Sources */,
 				7E09922A20B15B7C00AB7C71 /* Frameworks */,
 				7E09922B20B15B7C00AB7C71 /* Resources */,
+				7E09925320B1740A00AB7C71 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -194,13 +204,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E09925320B1740A00AB7C71 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E09922920B15B7C00AB7C71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E09923320B15B7C00AB7C71 /* ViewController.swift in Sources */,
+				7E09925920B1BAC900AB7C71 /* CollectionViewCell.swift in Sources */,
+				7E09923320B15B7C00AB7C71 /* ScrollViewController.swift in Sources */,
+				7E09925220B15C1400AB7C71 /* GlassNavigationController.swift in Sources */,
 				7E09923120B15B7C00AB7C71 /* AppDelegate.swift in Sources */,
+				7E09925720B1B82900AB7C71 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6XUQ3PPN9;
 				INFOPLIST_FILE = GlassNavigationBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +411,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6XUQ3PPN9;
 				INFOPLIST_FILE = GlassNavigationBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
