@@ -10,6 +10,8 @@
 
 ## Feature
 
+*  Adjust your NavigationBar's Transparency, while scrolling 
+
 ## Demo
 
 <table class="tg">
@@ -121,6 +123,8 @@ override func viewWillAppear(_ animated: Bool) {
 }
 ```
 
+`setNavbarTheme(isTransparent: scrollView:)` offer you to set some otehr options we have. See Information about these properties(https://github.com/hcn1519/GlassNavigationBar#property-of-glassNavigationController).
+
 ### Put your scrollView above navigationBar
 
 Apple's screen guide has been revised since the iPhone X was released. Apple recommends us to use `safeArea` for background autolayout. However, we often have to put our scroll view on the status bar. To do this, you first need to pin your `scrollView` top constraint to `superview` top constarint.(not `safeArea`). Then just use `adjustNavigationAlpha(scrollView:)`.
@@ -150,8 +154,19 @@ override func viewDidLoad() {
     scrollView.delegate = self
 }
 ```
+2. Allow your ViewController  `extendedLayoutIncludesOpaqueBars` to `true`
 
-2. Inside `scrollViewDidScroll` do like this.
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    if let navbarController = self.navigationController as? GlassNavigationController {
+        navbarController.extendedLayoutIncludesOpaqueBars(self)
+    }
+}
+```
+If you don't do that, your scrollView works weird, when it's alpha becomes `1`.
+
+3. Inside `scrollViewDidScroll` do like this.
 
 ```swift
 extension ViewController: UIScrollViewDelegate {
