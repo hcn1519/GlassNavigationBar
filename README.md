@@ -213,3 +213,5 @@ open var hideNavigationBottomLine: Bool
 
 
 ## License
+
+`GlassNavigationBar` is released under the MIT license. [See LICENSE](https://github.com/hcn1519/GlassNavigationBar/blob/master/LICENSE) for details.
