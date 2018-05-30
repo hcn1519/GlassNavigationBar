@@ -118,7 +118,7 @@ override func viewWillAppear(_ animated: Bool) {
 
     if let navbarController = self.navigationController as? GlassNavigationController {
         navbarController.setNavbarTheme(isTransparent: true, scrollView: self.scrollView)
-        
+
         // With some options.
         navbarController.setNavbarTheme(isTransparent: true, scrollView: self.scrollView, color: .white,
         tintColor: .black, hideBottomHairline: true, contentHeight: 600)
