@@ -11,6 +11,7 @@ import UIKit
 open class GlassNavigationController: UINavigationController {
 
     open var contentHeight: CGFloat?
+    open var startOffset: CGFloat = 0.0
 
     open var color: UIColor = .white {
         didSet {
@@ -60,7 +61,7 @@ open class GlassNavigationController: UINavigationController {
     
     public func setNavbarTheme(isTransparent: Bool, scrollView: UIScrollView, color: UIColor? = nil,
                                tintColor: UIColor? = nil, hideBottomHairline: Bool? = nil,
-                               contentHeight: CGFloat? = nil) {
+                               contentHeight: CGFloat? = nil, startOffset: CGFloat = 0) {
         self.color = color ?? .white
         self.navigationBar.tintColor = tintColor ?? .black
         self.isTransparent = isTransparent
@@ -82,7 +83,7 @@ open class GlassNavigationController: UINavigationController {
 
             return height - navBarHeight - statusBarHeight
         }()
-
+        self.startOffset = startOffset
         adjustNavigationAlpha(scrollView: scrollView)
     }
 
@@ -118,7 +119,10 @@ extension GlassNavigationController: UIScrollViewDelegate {
             self.navigationBar.isTranslucent = isTranslucent
         }
 
-        let offsetY = scrollView.contentOffset.y
+        let offsetY: CGFloat = {
+            let firstOffset = startOffset < 0 ? startOffset * -1 : startOffset
+            return scrollView.contentOffset.y + firstOffset
+        }()
 
         let alpha: CGFloat = {
             if let maxHeight = contentHeight {
