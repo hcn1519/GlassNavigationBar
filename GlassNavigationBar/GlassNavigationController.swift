@@ -11,6 +11,7 @@ import UIKit
 open class GlassNavigationController: UINavigationController {
 
     open var contentHeight: CGFloat?
+    open var startOffset: CGFloat = 0.0
 
     open var scrollViewStartOffsetY: CGFloat = 0.0
 
@@ -59,7 +60,7 @@ open class GlassNavigationController: UINavigationController {
     public func extendedLayoutIncludesOpaqueBars(_ viewController: UIViewController) {
         viewController.extendedLayoutIncludesOpaqueBars = true
     }
-    
+
     public func setNavbarTheme(isTransparent: Bool, scrollView: UIScrollView, color: UIColor? = nil,
                                tintColor: UIColor? = nil, hideBottomHairline: Bool? = nil,
                                contentHeight: CGFloat? = nil, scrollViewStartOffsetY: CGFloat = 0) {
