@@ -12,6 +12,8 @@ open class GlassNavigationController: UINavigationController {
 
     open var contentHeight: CGFloat?
 
+    open var scrollViewStartOffsetY: CGFloat = 0.0
+
     open var color: UIColor = .white {
         didSet {
             self.setBackground(color: color)
@@ -60,7 +62,7 @@ open class GlassNavigationController: UINavigationController {
     
     public func setNavbarTheme(isTransparent: Bool, scrollView: UIScrollView, color: UIColor? = nil,
                                tintColor: UIColor? = nil, hideBottomHairline: Bool? = nil,
-                               contentHeight: CGFloat? = nil) {
+                               contentHeight: CGFloat? = nil, scrollViewStartOffsetY: CGFloat = 0) {
         self.color = color ?? .white
         self.navigationBar.tintColor = tintColor ?? .black
         self.isTransparent = isTransparent
@@ -82,7 +84,7 @@ open class GlassNavigationController: UINavigationController {
 
             return height - navBarHeight - statusBarHeight
         }()
-
+        self.scrollViewStartOffsetY = scrollViewStartOffsetY
         adjustNavigationAlpha(scrollView: scrollView)
     }
 
@@ -118,14 +120,20 @@ extension GlassNavigationController: UIScrollViewDelegate {
             self.navigationBar.isTranslucent = isTranslucent
         }
 
-        let offsetY = scrollView.contentOffset.y
+        let offsetY: CGFloat = {
+            let firstOffset = scrollViewStartOffsetY < 0 ? scrollViewStartOffsetY * -1 : scrollViewStartOffsetY
+            return scrollView.contentOffset.y + firstOffset
+        }()
 
         let alpha: CGFloat = {
             if let maxHeight = contentHeight {
                 return offsetY / maxHeight
             }
 
-            let alpha = offsetY / (scrollView.contentSize.height - scrollView.frame.size.height)
+            let alpha: CGFloat = {
+                let totalHeight = scrollView.contentSize.height - scrollView.frame.size.height
+                return totalHeight != 0 ? offsetY / totalHeight : 0
+            }()
 
             switch alpha {
             case _ where alpha < 0:
