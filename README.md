@@ -167,6 +167,7 @@ override func viewDidLoad() {
     }
 }
 ```
+
 If you don't do that, your scrollView works weird, when it's alpha becomes `1`.
 
 3. Inside `scrollViewDidScroll` do like this.
@@ -183,6 +184,24 @@ extension ViewController: UIScrollViewDelegate {
 
 ⚠️ We highly recommend you to use this feature with `setNavbarTheme()` function, or set navigationBar's theme on `viewWillAppear`. If you do not, we can not guarantee that the theme of the navigation bar will remain the same when you return to the other screen and come back.
 
+
+#### ScrollView that initial value of contentOffset.y is not 0
+
+Sometimes, your ScrollView's initial `scrollView.contentOffset.y` value is not `0`. In this case, you need to set `scrollViewStartOffsetY` property.
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    if let navbarController = self.navigationController as? GlassNavigationController {
+        navbarController.scrollViewStartOffsetY = someValue
+    }
+}
+```
+
+You also can set this value from `setNavbarTheme(isTransparent: scrollView:)`.
+
+
 ### Property Of GlassNavigationController
 
 So far `GlassNavigationController` has 4 properties for you to use.
@@ -190,9 +209,33 @@ So far `GlassNavigationController` has 4 properties for you to use.
 ```swift
 open var contentHeight: CGFloat?
 ```
-`contentHeight` is the maximum height for navigation bar's alpha value. For example, if you set your `contentHeight` to 600, your navigationBar's alpha will be `1`, when your `scrollView.contentOffset.y` is 600.
+
+`contentHeight` is the maximum height for navigation bar's alpha value.(length of content) For example, if you set your `contentHeight` to `600`, your navigationBar's alpha will be `1`, when your `scrollView.contentOffset.y` is `600`. Above that offset, alpah value always `1`.
 
 If you don't set `contentHeight`, the default value will be `scrollView.contentSize.height`.
+
+
+```swift
+open var scrollViewStartOffsetY: CGFloat
+```
+
+`scrollViewStartOffsetY` is for your scrollView's initial `scrollView.contentOffset.y`. Not all scrollView start it's `contentOffset.y` from 0. If your scrollView's initial contentOffset.y is not 0, set this value same as yours. NavigationBar's alpha value will start it's color variation from that value. For example, if you set like this,
+
+```swift
+contentHeight = 144.0
+scrollViewStartOffsetY = -208.0
+
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if let navbarController = self.navigationController as? GlassNavigationController {
+            navbarController.scrollViewDidScroll(scrollView)
+        }
+    }
+}
+```
+
+Your navigationBar's alpha will be `0` at -208.0, and become `1` at -64.0.
+
 
 ```swift
 open var color: UIColor
