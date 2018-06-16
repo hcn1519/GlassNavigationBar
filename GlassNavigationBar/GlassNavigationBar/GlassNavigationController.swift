@@ -8,6 +8,8 @@
 
 import UIKit
 
+public typealias ColorSet = (UIColor, UIColor)
+
 public struct NavigationColorOptions {
     var backgroundColor: UIColor?
     var tintColor: UIColor?
@@ -34,8 +36,6 @@ extension NavigationColorOptions {
 }
 
 open class GlassNavigationController: UINavigationController {
-
-    public typealias ColorSet = (UIColor, UIColor)
 
     open var contentHeight: CGFloat?
     open var startOffset: CGFloat = 0.0
@@ -210,12 +210,13 @@ extension GlassNavigationController: UIScrollViewDelegate {
     func adjustGradientColor(length: CGFloat, offsetY: CGFloat) {
 
         if let backgroundColorSet = backgroundColorSet {
-            let backgroundColor = setGradient(colorSet: backgroundColorSet, totalLength: length, current: offsetY)
+
+            let backgroundColor = UIColor.setGradient(colorSet: backgroundColorSet, totalLength: length, current: offsetY)
 
             self.setBackground(color: backgroundColor)
         }
         if let tintColorSet = tintColorSet {
-            let tintColor = setGradient(colorSet: tintColorSet, totalLength: length, current: offsetY)
+            let tintColor = UIColor.setGradient(colorSet: tintColorSet, totalLength: length, current: offsetY)
 
             self.navigationBar.tintColor = tintColor
             self.setTitleAttribute(attribute: [NSAttributedStringKey.foregroundColor: tintColor])
