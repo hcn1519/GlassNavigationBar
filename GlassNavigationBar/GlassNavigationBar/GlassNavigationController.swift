@@ -16,7 +16,6 @@ public struct NavigationOptions {
     var hideBottomHairline: Bool?
     var contentHeight: CGFloat?
     var scrollViewStartOffsetY: CGFloat = 0
-    var navigationItemIsTransparent: Bool? = false
 }
 
 extension NavigationOptions {
@@ -52,10 +51,30 @@ open class GlassNavigationController: UINavigationController {
         }
     }
 
+    open var titleTextAlpha: CGFloat = 0.0 {
+        didSet {
+            if adjustTitleTextTransparency {
+                self.setNavigationBarHidden(false, animated: false)
+                self.setTitleColor(color: self.navigationBar.tintColor.withAlphaComponent(titleTextAlpha))
+                self.navigationItem.titleView?.alpha = titleTextAlpha
+            }
+        }
+    }
+
     open var adjustNavigationItemTransparency: Bool = false {
         didSet {
             if adjustNavigationItemTransparency {
                 self.navigationBar.tintColor = self.navigationBar.tintColor.withAlphaComponent(navigationItemAlpha)
+            }
+        }
+    }
+
+    open var adjustTitleTextTransparency: Bool = false {
+        didSet {
+            if adjustTitleTextTransparency {
+                self.setTitleColor(color: self.navigationBar.tintColor.withAlphaComponent(titleTextAlpha))
+                self.navigationItem.titleView?.alpha = titleTextAlpha
+                self.setNavigationBarHidden(true, animated: true)
             }
         }
     }
@@ -154,6 +173,8 @@ open class GlassNavigationController: UINavigationController {
 
         self.backgroundColorSet = nil
         self.tintColorSet = nil
+        self.adjustNavigationItemTransparency = false
+        self.adjustTitleTextTransparency = false
     }
 
     public func scrollViewAboveNavigation(scrollView: UIScrollView) {
@@ -206,12 +227,9 @@ extension GlassNavigationController: UIScrollViewDelegate {
             }()
 
             switch alpha {
-            case _ where alpha < 0:
-                return 0
-            case _ where alpha > 1:
-                return 1
-            default:
-                return alpha
+            case _ where alpha < 0: return 0
+            case _ where alpha > 1: return 1
+            default: return alpha
             }
         }()
 
@@ -227,19 +245,20 @@ extension GlassNavigationController: UIScrollViewDelegate {
             self.navigationItemAlpha = alpha
         }
 
+        if adjustTitleTextTransparency {
+            self.titleTextAlpha = alpha
+        }
     }
 
     func adjustGradientColor(length: CGFloat, offsetY: CGFloat) {
 
         if let backgroundColorSet = backgroundColorSet {
-
             let backgroundColor = UIColor.setGradient(colorSet: backgroundColorSet, totalLength: length, current: offsetY)
-
             self.setBackground(color: backgroundColor)
         }
+
         if let tintColorSet = tintColorSet {
             let tintColor = UIColor.setGradient(colorSet: tintColorSet, totalLength: length, current: offsetY)
-
             self.navigationBar.tintColor = tintColor
             self.setTitleAttribute(attribute: [NSAttributedStringKey.foregroundColor: tintColor])
         }
