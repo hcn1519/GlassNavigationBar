@@ -8,16 +8,45 @@
 
 import UIKit
 
+public struct NavigationColorOptions {
+    var backgroundColor: UIColor?
+    var tintColor: UIColor?
+    var hideBottomHairline: Bool?
+    var contentHeight: CGFloat?
+    var scrollViewStartOffsetY: CGFloat = 0
+}
+
+extension NavigationColorOptions {
+    init(backgroundColor: UIColor) {
+        self.backgroundColor = backgroundColor
+    }
+
+    init(tintColor: UIColor) {
+        self.tintColor = tintColor
+    }
+
+    init(backgroundColor: UIColor?, tintColor: UIColor?, hideBottomHairline: Bool?, contentHeight: CGFloat?) {
+        self.backgroundColor = backgroundColor
+        self.tintColor = tintColor
+        self.hideBottomHairline = hideBottomHairline
+        self.contentHeight = contentHeight
+    }
+}
+
 open class GlassNavigationController: UINavigationController {
+
+    public typealias ColorSet = (UIColor, UIColor)
 
     open var contentHeight: CGFloat?
     open var startOffset: CGFloat = 0.0
-
     open var scrollViewStartOffsetY: CGFloat = 0.0
 
-    open var color: UIColor = .white {
+    open var tintColorSet: ColorSet?
+    open var backgroundColorSet: ColorSet?
+
+    open var backgroundColor: UIColor = .white {
         didSet {
-            self.setBackground(color: color)
+            self.setBackground(color: backgroundColor)
         }
     }
 
@@ -57,36 +86,58 @@ open class GlassNavigationController: UINavigationController {
         }
     }
 
-    public func extendedLayoutIncludesOpaqueBars(_ viewController: UIViewController) {
+    public func extendedLayoutIncludesOpaqueBars(_ viewController: UIViewController, scrollView: UIScrollView) {
         viewController.extendedLayoutIncludesOpaqueBars = true
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
     }
 
-    public func setNavbarTheme(isTransparent: Bool, scrollView: UIScrollView, color: UIColor? = nil,
-                               tintColor: UIColor? = nil, hideBottomHairline: Bool? = nil,
-                               contentHeight: CGFloat? = nil, scrollViewStartOffsetY: CGFloat = 0) {
-        self.color = color ?? .white
-        self.navigationBar.tintColor = tintColor ?? .black
+    public func setColor(scrollView: UIScrollView, tintColorSet: ColorSet? = nil, backgroundColorSet: ColorSet? = nil) {
+        self.tintColorSet = tintColorSet
+        self.backgroundColorSet = backgroundColorSet
+        adjustNavigationAlpha(scrollView: scrollView)
+    }
+
+    public func setNavigationTheme(isTransparent: Bool, scrollView: UIScrollView, options: NavigationColorOptions? = nil) {
         self.isTransparent = isTransparent
-        self.hideNavigationBottomLine = hideBottomHairline ?? true
 
-        self.contentHeight = {
-            guard let height = contentHeight else { return nil }
+        if let options = options {
+            self.backgroundColor = options.backgroundColor ?? .white
+            self.navigationBar.tintColor = options.tintColor ?? .black
 
-            let navBarHeight: CGFloat = {
-                if #available(iOS 11.0, *) {
-                    if self.navigationBar.prefersLargeTitles {
-                        return 44
+            self.hideNavigationBottomLine = options.hideBottomHairline ?? false
+            self.contentHeight = {
+                guard let height = options.contentHeight else { return nil }
+
+                let navBarHeight: CGFloat = {
+                    if #available(iOS 11.0, *) {
+                        if self.navigationBar.prefersLargeTitles {
+                            return 44
+                        }
                     }
-                }
-                return self.navigationBar.frame.height
+                    return self.navigationBar.frame.height
+                }()
+
+                let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+
+                return height - navBarHeight - statusBarHeight
             }()
 
-            let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+            self.scrollViewStartOffsetY = options.scrollViewStartOffsetY
 
-            return height - navBarHeight - statusBarHeight
-        }()
-        self.scrollViewStartOffsetY = scrollViewStartOffsetY
+        } else {
+            self.backgroundColor = .white
+            self.navigationBar.tintColor = .black
+            setTitleColor(color: .black)
+        }
+
         adjustNavigationAlpha(scrollView: scrollView)
+
+        self.backgroundColorSet = nil
+        self.tintColorSet = nil
     }
 
     public func scrollViewAboveNavigation(scrollView: UIScrollView) {
@@ -102,18 +153,19 @@ open class GlassNavigationController: UINavigationController {
         }()
 
         scrollView.contentInset.top = offset * -1
-
-        if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .never
-        } else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
     }
 }
 
 // MARK: UIScrollViewDelegate
 
 extension GlassNavigationController: UIScrollViewDelegate {
+
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        adjustNavigationAlpha(scrollView: scrollView)
+
+        let length = contentHeight ?? scrollView.contentSize.height - scrollView.frame.size.height
+        adjustGradientColor(length: length, offsetY: scrollView.contentOffset.y)
+    }
 
     public func adjustNavigationAlpha(scrollView: UIScrollView) {
         func scrollingBackground(color: UIColor, isTranslucent: Bool) {
@@ -149,16 +201,26 @@ extension GlassNavigationController: UIScrollViewDelegate {
         let contentInsetTop = scrollView.contentInset.top * -1
 
         if offsetY > contentInsetTop {
-            scrollingBackground(color: self.color.withAlphaComponent(alpha), isTranslucent: alpha < 1.0)
+            scrollingBackground(color: self.backgroundColor.withAlphaComponent(alpha), isTranslucent: alpha < 1.0)
         } else {
-            scrollingBackground(color: self.color.withAlphaComponent(0.0), isTranslucent: true)
+            scrollingBackground(color: self.backgroundColor.withAlphaComponent(0.0), isTranslucent: true)
         }
     }
 
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        adjustNavigationAlpha(scrollView: scrollView)
-    }
+    func adjustGradientColor(length: CGFloat, offsetY: CGFloat) {
 
+        if let backgroundColorSet = backgroundColorSet {
+            let backgroundColor = setGradient(colorSet: backgroundColorSet, totalLength: length, current: offsetY)
+
+            self.setBackground(color: backgroundColor)
+        }
+        if let tintColorSet = tintColorSet {
+            let tintColor = setGradient(colorSet: tintColorSet, totalLength: length, current: offsetY)
+
+            self.navigationBar.tintColor = tintColor
+            self.setTitleAttribute(attribute: [NSAttributedStringKey.foregroundColor: tintColor])
+        }
+    }
 }
 
 extension GlassNavigationController {
@@ -200,7 +262,7 @@ extension GlassNavigationController {
             self.navigationBar.setBackgroundImage(UIImage(), for: .default)
             self.navigationBar.shadowImage = UIImage()
         } else {
-            let background = setImageFrom(color: self.color.withAlphaComponent(self.navigationBar.alpha))
+            let background = setImageFrom(color: self.backgroundColor.withAlphaComponent(self.navigationBar.alpha))
             self.navigationBar.setBackgroundImage(background, for: .default)
         }
     }
