@@ -10,7 +10,7 @@ import UIKit
 
 public typealias ColorSet = (UIColor, UIColor)
 
-public struct NavigationColorOptions {
+public struct NavigationOptions {
     var backgroundColor: UIColor?
     var tintColor: UIColor?
     var hideBottomHairline: Bool?
@@ -18,7 +18,7 @@ public struct NavigationColorOptions {
     var scrollViewStartOffsetY: CGFloat = 0
 }
 
-extension NavigationColorOptions {
+extension NavigationOptions {
     init(backgroundColor: UIColor) {
         self.backgroundColor = backgroundColor
     }
@@ -44,6 +44,40 @@ open class GlassNavigationController: UINavigationController {
 
     open var tintColorSet: ColorSet?
     open var backgroundColorSet: ColorSet?
+
+    open var navigationItemAlpha: CGFloat = 0.0 {
+        didSet {
+            self.navigationBar.tintColor = self.navigationBar.tintColor.withAlphaComponent(navigationItemAlpha)
+        }
+    }
+
+    open var titleTextAlpha: CGFloat = 0.0 {
+        didSet {
+            if adjustTitleTextTransparency {
+                self.setNavigationBarHidden(false, animated: false)
+                self.setTitleColor(color: self.navigationBar.tintColor.withAlphaComponent(titleTextAlpha))
+                self.navigationItem.titleView?.alpha = titleTextAlpha
+            }
+        }
+    }
+
+    open var adjustNavigationItemTransparency: Bool = false {
+        didSet {
+            if adjustNavigationItemTransparency {
+                self.navigationBar.tintColor = self.navigationBar.tintColor.withAlphaComponent(navigationItemAlpha)
+            }
+        }
+    }
+
+    open var adjustTitleTextTransparency: Bool = false {
+        didSet {
+            if adjustTitleTextTransparency {
+                self.setTitleColor(color: self.navigationBar.tintColor.withAlphaComponent(titleTextAlpha))
+                self.navigationItem.titleView?.alpha = titleTextAlpha
+                self.setNavigationBarHidden(true, animated: true)
+            }
+        }
+    }
 
     open var backgroundColor: UIColor = .white {
         didSet {
@@ -102,7 +136,7 @@ open class GlassNavigationController: UINavigationController {
         adjustNavigationAlpha(scrollView: scrollView)
     }
 
-    public func setNavigationTheme(isTransparent: Bool, scrollView: UIScrollView, options: NavigationColorOptions? = nil) {
+    public func setNavigationTheme(isTransparent: Bool, scrollView: UIScrollView, options: NavigationOptions? = nil) {
 
         self.isTransparent = isTransparent
 
@@ -139,6 +173,8 @@ open class GlassNavigationController: UINavigationController {
 
         self.backgroundColorSet = nil
         self.tintColorSet = nil
+        self.adjustNavigationItemTransparency = false
+        self.adjustTitleTextTransparency = false
     }
 
     public func scrollViewAboveNavigation(scrollView: UIScrollView) {
@@ -166,6 +202,7 @@ extension GlassNavigationController: UIScrollViewDelegate {
 
         let length = contentHeight ?? scrollView.contentSize.height - scrollView.frame.size.height
         adjustGradientColor(length: length, offsetY: scrollView.contentOffset.y)
+
     }
 
     public func adjustNavigationAlpha(scrollView: UIScrollView) {
@@ -190,12 +227,9 @@ extension GlassNavigationController: UIScrollViewDelegate {
             }()
 
             switch alpha {
-            case _ where alpha < 0:
-                return 0
-            case _ where alpha > 1:
-                return 1
-            default:
-                return alpha
+            case _ where alpha < 0: return 0
+            case _ where alpha > 1: return 1
+            default: return alpha
             }
         }()
 
@@ -206,19 +240,25 @@ extension GlassNavigationController: UIScrollViewDelegate {
         } else {
             scrollingBackground(color: self.backgroundColor.withAlphaComponent(0.0), isTranslucent: true)
         }
+
+        if adjustNavigationItemTransparency {
+            self.navigationItemAlpha = alpha
+        }
+
+        if adjustTitleTextTransparency {
+            self.titleTextAlpha = alpha
+        }
     }
 
     func adjustGradientColor(length: CGFloat, offsetY: CGFloat) {
 
         if let backgroundColorSet = backgroundColorSet {
-
             let backgroundColor = UIColor.setGradient(colorSet: backgroundColorSet, totalLength: length, current: offsetY)
-
             self.setBackground(color: backgroundColor)
         }
+
         if let tintColorSet = tintColorSet {
             let tintColor = UIColor.setGradient(colorSet: tintColorSet, totalLength: length, current: offsetY)
-
             self.navigationBar.tintColor = tintColor
             self.setTitleAttribute(attribute: [NSAttributedStringKey.foregroundColor: tintColor])
         }
