@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gUx-fh-rx7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gUx-fh-rx7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -78,7 +78,7 @@
                                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="nextBtnTapped:" destination="RhW-lC-YKj" eventType="touchUpInside" id="e8G-fr-UPe"/>
+                                                    <action selector="colorExampleBtnTapped:" destination="RhW-lC-YKj" eventType="touchUpInside" id="UMj-6Y-GBc"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olia-gozha-377160-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="mPD-or-Uwf">
@@ -144,11 +144,12 @@
                         <outlet property="scrollView" destination="my3-W2-xrD" id="baM-ca-2Yx"/>
                         <outlet property="topButton" destination="NA0-WH-8pb" id="ZH9-Jk-10R"/>
                         <segue destination="gW6-PS-VXr" kind="show" identifier="goToNextExample" id="llx-ae-eAE"/>
+                        <segue destination="Mel-wk-S2F" kind="show" identifier="ColorExample" id="Joq-y7-Jc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgT-Hh-JOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="185"/>
+            <point key="canvasLocation" x="948" y="152"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="jaL-R2-lOY">
@@ -225,11 +226,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ven-O3-6nO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840.8" y="184.85757121439281"/>
+            <point key="canvasLocation" x="1873" y="59"/>
+        </scene>
+        <!--Color Example View Controller-->
+        <scene sceneID="uel-eT-vNU">
+            <objects>
+                <viewController id="Mel-wk-S2F" customClass="ColorExampleViewController" customModule="GlassNavigationBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XPm-km-0uG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOa-u3-7Z6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXC-By-hOf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1250"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redd-angelo-236777-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="dBF-5V-PnY">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="625"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="625" id="Ave-KH-hUe"/>
+                                                    <constraint firstAttribute="width" constant="375" id="eJm-pY-FCU"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pineapple-supply-co-262624-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="Uof-cG-yZI">
+                                                <rect key="frame" x="0.0" y="625" width="375" height="625"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="In5-69-Ic3"/>
+                                                    <constraint firstAttribute="height" constant="625" id="h42-FB-UaS"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Uof-cG-yZI" firstAttribute="top" secondItem="dBF-5V-PnY" secondAttribute="bottom" id="4gD-eO-BT7"/>
+                                            <constraint firstItem="Uof-cG-yZI" firstAttribute="leading" secondItem="YXC-By-hOf" secondAttribute="leading" id="5Re-Lo-c9B"/>
+                                            <constraint firstAttribute="trailing" secondItem="dBF-5V-PnY" secondAttribute="trailing" id="IAW-fY-FwA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Uof-cG-yZI" secondAttribute="trailing" id="Mog-jN-J8g"/>
+                                            <constraint firstItem="dBF-5V-PnY" firstAttribute="top" secondItem="YXC-By-hOf" secondAttribute="top" id="sD8-Yg-477"/>
+                                            <constraint firstItem="dBF-5V-PnY" firstAttribute="leading" secondItem="YXC-By-hOf" secondAttribute="leading" id="uJc-0s-Xie"/>
+                                            <constraint firstAttribute="height" constant="1250" id="vvF-pe-qWc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YXC-By-hOf" firstAttribute="top" secondItem="VOa-u3-7Z6" secondAttribute="top" id="J6v-Sc-FYr"/>
+                                    <constraint firstAttribute="bottom" secondItem="YXC-By-hOf" secondAttribute="bottom" id="jtN-Fr-1jg"/>
+                                    <constraint firstAttribute="trailing" secondItem="YXC-By-hOf" secondAttribute="trailing" id="mcm-6F-hdo"/>
+                                    <constraint firstItem="YXC-By-hOf" firstAttribute="leading" secondItem="VOa-u3-7Z6" secondAttribute="leading" id="q9I-bU-5e7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VOa-u3-7Z6" firstAttribute="top" secondItem="wpV-pe-Odh" secondAttribute="top" id="BAn-C0-PLx"/>
+                            <constraint firstItem="wpV-pe-Odh" firstAttribute="bottom" secondItem="VOa-u3-7Z6" secondAttribute="bottom" id="R1n-p0-udM"/>
+                            <constraint firstItem="VOa-u3-7Z6" firstAttribute="leading" secondItem="wpV-pe-Odh" secondAttribute="leading" id="hcr-uJ-ake"/>
+                            <constraint firstItem="wpV-pe-Odh" firstAttribute="trailing" secondItem="VOa-u3-7Z6" secondAttribute="trailing" id="sdN-Vz-4Am"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wpV-pe-Odh"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="VOa-u3-7Z6" id="k4u-gd-Bvb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8Y-GE-YDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2812" y="853.22338830584715"/>
         </scene>
     </scenes>
     <resources>
         <image name="olia-gozha-377160-unsplash" width="3113" height="3800"/>
         <image name="pineapple-supply-co-262624-unsplash" width="3509" height="5263"/>
+        <image name="redd-angelo-236777-unsplash" width="3288" height="4932"/>
     </resources>
 </document>

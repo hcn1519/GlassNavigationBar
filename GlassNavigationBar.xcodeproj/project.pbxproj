@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E02BB5F20C190CA001B245D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02BB5E20C190CA001B245D /* UIColor+Extension.swift */; };
 		7E09923120B15B7C00AB7C71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09923020B15B7C00AB7C71 /* AppDelegate.swift */; };
 		7E09923320B15B7C00AB7C71 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09923220B15B7C00AB7C71 /* ScrollViewController.swift */; };
 		7E09923620B15B7C00AB7C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09923420B15B7C00AB7C71 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		7E09925220B15C1400AB7C71 /* GlassNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09925120B15C1400AB7C71 /* GlassNavigationController.swift */; };
 		7E09925720B1B82900AB7C71 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09925620B1B82900AB7C71 /* CollectionViewController.swift */; };
 		7E09925920B1BAC900AB7C71 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09925820B1BAC900AB7C71 /* CollectionViewCell.swift */; };
+		7E2C995620C1CCC600D74D09 /* ColorExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C995520C1CCC600D74D09 /* ColorExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E02BB5E20C190CA001B245D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7E09922D20B15B7C00AB7C71 /* GlassNavigationBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlassNavigationBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E09923020B15B7C00AB7C71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E09923220B15B7C00AB7C71 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		7E09925120B15C1400AB7C71 /* GlassNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassNavigationController.swift; sourceTree = "<group>"; };
 		7E09925620B1B82900AB7C71 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		7E09925820B1BAC900AB7C71 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		7E2C995520C1CCC600D74D09 /* ColorExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E060C4020D5152E006115EF /* GlassNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				7E09925120B15C1400AB7C71 /* GlassNavigationController.swift */,
+				7E02BB5E20C190CA001B245D /* UIColor+Extension.swift */,
+			);
+			path = GlassNavigationBar;
+			sourceTree = "<group>";
+		};
 		7E09922420B15B7C00AB7C71 = {
 			isa = PBXGroup;
 			children = (
@@ -85,15 +98,16 @@
 		7E09922F20B15B7C00AB7C71 /* GlassNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				7E060C4020D5152E006115EF /* GlassNavigationBar */,
 				7E09923020B15B7C00AB7C71 /* AppDelegate.swift */,
 				7E09923220B15B7C00AB7C71 /* ScrollViewController.swift */,
 				7E09925620B1B82900AB7C71 /* CollectionViewController.swift */,
+				7E2C995520C1CCC600D74D09 /* ColorExampleViewController.swift */,
 				7E09925820B1BAC900AB7C71 /* CollectionViewCell.swift */,
 				7E09923420B15B7C00AB7C71 /* Main.storyboard */,
 				7E09923720B15B7D00AB7C71 /* Assets.xcassets */,
 				7E09923920B15B7D00AB7C71 /* LaunchScreen.storyboard */,
 				7E09923C20B15B7D00AB7C71 /* Info.plist */,
-				7E09925120B15C1400AB7C71 /* GlassNavigationController.swift */,
 			);
 			path = GlassNavigationBar;
 			sourceTree = "<group>";
@@ -229,7 +243,9 @@
 				7E09923320B15B7C00AB7C71 /* ScrollViewController.swift in Sources */,
 				7E09925220B15C1400AB7C71 /* GlassNavigationController.swift in Sources */,
 				7E09923120B15B7C00AB7C71 /* AppDelegate.swift in Sources */,
+				7E02BB5F20C190CA001B245D /* UIColor+Extension.swift in Sources */,
 				7E09925720B1B82900AB7C71 /* CollectionViewController.swift in Sources */,
+				7E2C995620C1CCC600D74D09 /* ColorExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
