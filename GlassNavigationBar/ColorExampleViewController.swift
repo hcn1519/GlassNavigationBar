@@ -50,3 +50,7 @@ extension ColorExampleViewController: UIScrollViewDelegate {
         }
     }
 }
+
+private func setNavbar() {
+
+}

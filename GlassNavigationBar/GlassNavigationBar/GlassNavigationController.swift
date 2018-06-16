@@ -16,6 +16,7 @@ public struct NavigationOptions {
     var hideBottomHairline: Bool?
     var contentHeight: CGFloat?
     var scrollViewStartOffsetY: CGFloat = 0
+    var navigationItemIsTransparent: Bool? = false
 }
 
 extension NavigationOptions {
@@ -44,6 +45,20 @@ open class GlassNavigationController: UINavigationController {
 
     open var tintColorSet: ColorSet?
     open var backgroundColorSet: ColorSet?
+
+    open var navigationItemAlpha: CGFloat = 0.0 {
+        didSet {
+            self.navigationBar.tintColor = self.navigationBar.tintColor.withAlphaComponent(navigationItemAlpha)
+        }
+    }
+
+    open var adjustNavigationItemTransparency: Bool = false {
+        didSet {
+            if adjustNavigationItemTransparency {
+                self.navigationBar.tintColor = self.navigationBar.tintColor.withAlphaComponent(navigationItemAlpha)
+            }
+        }
+    }
 
     open var backgroundColor: UIColor = .white {
         didSet {
@@ -166,6 +181,7 @@ extension GlassNavigationController: UIScrollViewDelegate {
 
         let length = contentHeight ?? scrollView.contentSize.height - scrollView.frame.size.height
         adjustGradientColor(length: length, offsetY: scrollView.contentOffset.y)
+
     }
 
     public func adjustNavigationAlpha(scrollView: UIScrollView) {
@@ -206,6 +222,11 @@ extension GlassNavigationController: UIScrollViewDelegate {
         } else {
             scrollingBackground(color: self.backgroundColor.withAlphaComponent(0.0), isTranslucent: true)
         }
+
+        if adjustNavigationItemTransparency {
+            self.navigationItemAlpha = alpha
+        }
+
     }
 
     func adjustGradientColor(length: CGFloat, offsetY: CGFloat) {
