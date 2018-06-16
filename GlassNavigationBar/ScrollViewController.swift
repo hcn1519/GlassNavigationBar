@@ -26,7 +26,7 @@ class ScrollViewController: UIViewController {
 
         scrollView.delegate = self
         if let navbarController = self.navigationController as? GlassNavigationController {
-            navbarController.extendedLayoutIncludesOpaqueBars(self)
+            navbarController.extendedLayoutIncludesOpaqueBars(self, scrollView: scrollView)
             navbarController.scrollViewAboveNavigation(scrollView: scrollView)
         }
     }
@@ -39,10 +39,20 @@ class ScrollViewController: UIViewController {
         setNavbar()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let navbarController = self.navigationController as? GlassNavigationController {
+            navbarController.setTitleColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        }
+    }
+
     func setNavbar() {
         if let navbarController = self.navigationController as? GlassNavigationController {
-            navbarController.setNavbarTheme(isTransparent: true, scrollView: scrollView, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),
-                                            tintColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), hideBottomHairline: true, contentHeight: 600)
+            UIApplication.shared.statusBarStyle = .default
+
+            let options = NavigationColorOptions(backgroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), tintColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), hideBottomHairline: true, contentHeight: 600)
+            navbarController.setNavigationTheme(isTransparent: false, scrollView: scrollView, options: options)
+
         }
     }
 
@@ -57,6 +67,10 @@ class ScrollViewController: UIViewController {
 
     @IBAction func nextBtnTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "goToNextExample", sender: nil)
+    }
+
+    @IBAction func colorExampleBtnTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "ColorExample", sender: nil)
     }
 }
 
