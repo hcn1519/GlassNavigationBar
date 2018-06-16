@@ -32,7 +32,7 @@ class ColorExampleViewController: UIViewController {
     private func setNavbar() {
         if let navbarController = self.navigationController as? GlassNavigationController {
 
-            let options = NavigationColorOptions(backgroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), tintColor: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1), hideBottomHairline: true, contentHeight: 625)
+            let options = NavigationOptions(backgroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), tintColor: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1), hideBottomHairline: true, contentHeight: 625)
 
             navbarController.setNavigationTheme(isTransparent: false, scrollView: scrollView, options: options)
 
@@ -49,4 +49,8 @@ extension ColorExampleViewController: UIScrollViewDelegate {
             UIApplication.shared.statusBarStyle = scrollView.contentOffset.y >= 500 ? .lightContent : .default
         }
     }
+}
+
+private func setNavbar() {
+
 }

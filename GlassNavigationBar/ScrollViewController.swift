@@ -50,9 +50,8 @@ class ScrollViewController: UIViewController {
         if let navbarController = self.navigationController as? GlassNavigationController {
             UIApplication.shared.statusBarStyle = .default
 
-            let options = NavigationColorOptions(backgroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), tintColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), hideBottomHairline: true, contentHeight: 600)
+            let options = NavigationOptions(backgroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), tintColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), hideBottomHairline: true, contentHeight: 600)
             navbarController.setNavigationTheme(isTransparent: false, scrollView: scrollView, options: options)
-
         }
     }
 
