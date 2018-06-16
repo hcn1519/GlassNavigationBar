@@ -10,7 +10,7 @@ import UIKit
 
 public typealias ColorSet = (UIColor, UIColor)
 
-public struct NavigationColorOptions {
+public struct NavigationOptions {
     var backgroundColor: UIColor?
     var tintColor: UIColor?
     var hideBottomHairline: Bool?
@@ -18,7 +18,7 @@ public struct NavigationColorOptions {
     var scrollViewStartOffsetY: CGFloat = 0
 }
 
-extension NavigationColorOptions {
+extension NavigationOptions {
     init(backgroundColor: UIColor) {
         self.backgroundColor = backgroundColor
     }
@@ -102,7 +102,7 @@ open class GlassNavigationController: UINavigationController {
         adjustNavigationAlpha(scrollView: scrollView)
     }
 
-    public func setNavigationTheme(isTransparent: Bool, scrollView: UIScrollView, options: NavigationColorOptions? = nil) {
+    public func setNavigationTheme(isTransparent: Bool, scrollView: UIScrollView, options: NavigationOptions? = nil) {
 
         self.isTransparent = isTransparent
 
