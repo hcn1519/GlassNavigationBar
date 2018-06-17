@@ -11,9 +11,9 @@
 [![License](https://cocoapod-badges.herokuapp.com/l/GlassNavigationBar/badge.png)](https://github.com/hcn1519/GlassNavigationBar)
 
 ## Feature
-
-*  Adjust your NavigationBar's Transparency, while scrolling
-*  Allow to put your ScrollView above status bar
+* Make yoru NavigationBar Transparent easily
+* Adjust your NavigationBar's Transparency, while scrolling
+* Support Gradient Style color conversion of your navigationBar
 
 ## Demo
 
@@ -21,10 +21,12 @@
   <tr>
     <th>Demo1</th>
     <th>Demo2</th>
+    <th>Gradient Color Conversion</th>
   </tr>
   <tr>
     <td><img style="max-width: 200px" src="./images/gNav2.gif"></td>
     <td><img style="max-width: 200px" src="./images/gNav1.gif"></td>
+    <td><img style="max-width: 200px" src="./images/gNav3.gif"></td>
   </tr>
 </table>
 
@@ -61,18 +63,18 @@ $ pod install
 1. Make your `navigationController` use `GlassNavigationController` instead of `UINavigationController`.
 
 * If you use `storyboard`, Set the class of `navigationController` as `GlassNavigationController`.
-* If you create your navigationController programatically, use `GlassNavigationController` instance instad of `UINavigationController` instance.
+* If you create your navigationController programatically, use `GlassNavigationController` instance instead of `UINavigationController` instance.
 
 2. You need to pin `ScrollView` Top Constraint to it's `Superview`(make sure it is not `safeArea`)
 
-3. Use `setNavbarTheme(isTransparent: scrollView:)` for your navigationBar basic theme.
+3. Use `setNavigationTheme(isTransparent: scrollView:)` for your navigationBar basic theme.
 
 ```swift
 override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     if let navbarController = self.navigationController as? GlassNavigationController {
-        navbarController.setNavbarTheme(isTransparent: true, scrollView: scrollView, color: .green,
-                                        tintColor: .yellow, hideBottomHairline: true, contentHeight: 600)
+        let options = NavigationOptions(backgroundColor: .green, tintColor: .blue, hideBottomHairline: true, contentHeight: 600)
+        navbarController.setNavigationTheme(isTransparent: true, scrollView: scrollView, options: options)
     }
 }
 ```
@@ -86,7 +88,7 @@ override func viewDidLoad() {
 
     scrollView.delegate = self
     if let navbarController = self.navigationController as? GlassNavigationController {
-        navbarController.extendedLayoutIncludesOpaqueBars(self)
+        navbarController.extendedLayoutIncludesOpaqueBars(self, scrollView: scrollView)
         navbarController.scrollViewAboveNavigation(scrollView: scrollView)
     }
 }
@@ -108,25 +110,54 @@ That's it. Build and run your app! 🎉🎉 If you don't know how to do this, op
 
 ---
 
-### Set NavigationBar theme
+### Make NavigationBar Transparent
 
-You can set navigationBar's theme by using  `setNavbarTheme(isTransparent: scrollView:)`.
+Make your NavigationBar transparent is really simple.
 
 ```swift
 override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
     if let navbarController = self.navigationController as? GlassNavigationController {
-        navbarController.setNavbarTheme(isTransparent: true, scrollView: self.scrollView)
-
-        // With some options.
-        navbarController.setNavbarTheme(isTransparent: true, scrollView: self.scrollView, color: .white,
-        tintColor: .black, hideBottomHairline: true, contentHeight: 600)
+        navbarController.isTransparent = true
     }
 }
 ```
 
-`setNavbarTheme(isTransparent: scrollView:)` offer you to set some otehr options we have. See Information about these [properties](https://github.com/hcn1519/GlassNavigationBar#property-of-glassnavigationcontroller).
+Or if you also want to make your `navigationItem` or `title`(`titleView`), just set `adjustNavigationItemTransparency`, or `adjustTitleTextTransparency` to `true`.
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    if let navbarController = self.navigationController as? GlassNavigationController {
+        navbarController.isTransparent = true
+        navbarController.adjustNavigationItemTransparency = true
+        navbarController.adjustTitleTextTransparency = true
+    }
+}
+```
+
+
+### Set NavigationBar theme
+
+You can set navigationBar's theme by using  `setNavigationTheme(isTransparent: scrollView:)`.
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    if let navbarController = self.navigationController as? GlassNavigationController {
+        navbarController.setNavigationTheme(isTransparent: true, scrollView: self.scrollView)
+
+        // With some options.
+        let options = NavigationOptions(backgroundColor: .green, tintColor: .blue, hideBottomHairline: true, contentHeight: 600)
+        navbarController.setNavigationTheme(isTransparent: true, scrollView: scrollView, options: options)
+    }
+}
+```
+
+`setNavigationTheme(isTransparent: scrollView:)` offers you to set some otehr options we have. See Information about these [properties](https://github.com/hcn1519/GlassNavigationBar#property-of-glassnavigationcontroller).
 
 ### Put your scrollView above navigationBar
 
@@ -163,7 +194,7 @@ override func viewDidLoad() {
 override func viewDidLoad() {
     super.viewDidLoad()
     if let navbarController = self.navigationController as? GlassNavigationController {
-        navbarController.extendedLayoutIncludesOpaqueBars(self)
+        navbarController.extendedLayoutIncludesOpaqueBars(self, scrollView: scrollView)
     }
 }
 ```
@@ -182,10 +213,10 @@ extension ViewController: UIScrollViewDelegate {
 }
 ```
 
-⚠️ We highly recommend you to use this feature with `setNavbarTheme()` function, or set navigationBar's theme on `viewWillAppear`. If you do not, we can not guarantee that the theme of the navigation bar will remain the same when you return to the other screen and come back.
+⚠️ We highly recommend you to use this feature with `setNavigationTheme()` function, or set navigationBar's theme on `viewWillAppear`. If you do not, we can not guarantee that the theme of the navigation bar will remain the same when you return to the other screen and come back.
 
 
-#### ScrollView that initial value of contentOffset.y is not 0
+### ScrollView that initial value of contentOffset.y is not 0
 
 Sometimes, your ScrollView's initial `scrollView.contentOffset.y` value is not `0`. In this case, you need to set `scrollViewStartOffsetY` property.
 
@@ -201,10 +232,27 @@ override func viewWillAppear(_ animated: Bool) {
 
 You also can set this value from `setNavbarTheme(isTransparent: scrollView:)`.
 
+### Gradient Style NavigationBar color conversion
+
+`GlassNavigationBar` supports gradient color conversion of navigationBar.  
+
+![gradient](./images/gardient.png)
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    if let navbarController = self.navigationController as? GlassNavigationController {
+          navbarController.tintColorSet = (.blue, .white)
+          navbarController.backgroundColorSet = (.white, .blue)
+    }
+}
+```
+`GlassNavigationBar` has `tintColorSet`, `backgroundColorSet` which are typealias of `(UIColor, UIColor)`. Those are startColor and endColor of gradient conversion. Take a look at our demo if you want to know details.
 
 ### Property Of GlassNavigationController
 
-So far `GlassNavigationController` has 4 properties for you to use.
+So far `GlassNavigationController` has some properties for you to use.
 
 ```swift
 open var contentHeight: CGFloat?
@@ -235,25 +283,6 @@ extension ViewController: UIScrollViewDelegate {
 ```
 
 Your navigationBar's alpha will be `0` at -208.0, and become `1` at -64.0.
-
-
-```swift
-open var color: UIColor
-```
-
-`color` is for your navigationBar's background color.
-
-```swift
-open var isTransparent: Bool
-```
-
-`isTransparent` let you handle your navigationBar's transparency. If you set `isTransparent` to `true`, your navigationBar become transparent.
-
-```swift
-open var hideNavigationBottomLine: Bool
-```
-
-`UINavigationBar` has default bottomline. If you want to hide it, `hideNavigationBottomLine` to `true`.
 
 ---
 

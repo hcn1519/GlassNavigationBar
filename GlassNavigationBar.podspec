@@ -1,16 +1,13 @@
 Pod::Spec.new do |s|
   s.name             = 'GlassNavigationBar'
-<<<<<<< Updated upstream
-  s.version          = '0.1.1'
-  s.summary          = 'Transparency Adjustable NavigationBar'
-=======
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'Glassy UINavigationBar with Transparency Control and Color Conversion'
->>>>>>> Stashed changes
 
   s.description      = <<-DESC
-                        1. Adjust your NavigationBar's Transparency, while scrolling
-                        2. Allow to put your ScrollView above status bar
+                        1. Make yoru NavigationBar Transparent easily
+                        2. Adjust your NavigationBar's Transparency, while scrolling
+                        3. Put your ScrollView above status bar
+                        4. Support Gradient Style color conversion of your navigationBar
                        DESC
 
   s.homepage         = 'https://github.com/hcn1519/GlassNavigationBar'
@@ -19,6 +16,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/hcn1519/GlassNavigationBar.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
-  s.source_files = 'GlassNavigationBar/GlassNavigationController.swift'
+  s.source_files = 'GlassNavigationBar/GlassNavigationBar/*'
   s.frameworks = 'UIKit'
 end
