@@ -1,7 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = 'GlassNavigationBar'
+<<<<<<< Updated upstream
   s.version          = '0.1.1'
   s.summary          = 'Transparency Adjustable NavigationBar'
+=======
+  s.version          = '0.2.0'
+  s.summary          = 'Glassy UINavigationBar with Transparency Control and Color Conversion'
+>>>>>>> Stashed changes
 
   s.description      = <<-DESC
                         1. Adjust your NavigationBar's Transparency, while scrolling
