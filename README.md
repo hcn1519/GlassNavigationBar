@@ -237,7 +237,7 @@ You also can set this value from `setNavbarTheme(isTransparent: scrollView:)`.
 
 `GlassNavigationBar` supports gradient color transition of navigationBar.  
 
-![gradient](./images/gradient.png)
+![gradient](./images/gardient.png)
 
 ```swift
 override func viewWillAppear(_ animated: Bool) {
