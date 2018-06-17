@@ -11,10 +11,9 @@
 [![License](https://cocoapod-badges.herokuapp.com/l/GlassNavigationBar/badge.png)](https://github.com/hcn1519/GlassNavigationBar)
 
 ## Feature
-*  Make yoru NavigationBar Transparent easily
-*  Adjust your NavigationBar's Transparency, while scrolling 
-*  Put your ScrollView above status bar 
-*  Support Gradient Style color transition of your navigationBar
+* Make yoru NavigationBar Transparent easily
+* Adjust your NavigationBar's Transparency, while scrolling
+* Support Gradient Style color conversion of your navigationBar
 
 ## Demo
 
@@ -22,7 +21,7 @@
   <tr>
     <th>Demo1</th>
     <th>Demo2</th>
-    <th>Gradient Color Transitions</th>
+    <th>Gradient Color Conversion</th>
   </tr>
   <tr>
     <td><img style="max-width: 200px" src="./images/gNav2.gif"></td>
@@ -233,9 +232,9 @@ override func viewWillAppear(_ animated: Bool) {
 
 You also can set this value from `setNavbarTheme(isTransparent: scrollView:)`.
 
-### Gradient Style NavigationBar color transition
+### Gradient Style NavigationBar color conversion
 
-`GlassNavigationBar` supports gradient color transition of navigationBar.  
+`GlassNavigationBar` supports gradient color conversion of navigationBar.  
 
 ![gradient](./images/gardient.png)
 
@@ -249,7 +248,7 @@ override func viewWillAppear(_ animated: Bool) {
     }
 }
 ```
-`GlassNavigationBar` has `tintColorSet`, `backgroundColorSet` which are typealias of `(UIColor, UIColor)`. Those are startColor and endColor of gradient transition. Take a look at our demo if you want to know details.
+`GlassNavigationBar` has `tintColorSet`, `backgroundColorSet` which are typealias of `(UIColor, UIColor)`. Those are startColor and endColor of gradient conversion. Take a look at our demo if you want to know details.
 
 ### Property Of GlassNavigationController
 
