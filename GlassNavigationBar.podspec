@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = 'GlassNavigationBar'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'Glassy UINavigationBar with Transparency Control and Color Conversion'
-Camel
+
   s.description      = <<-DESC
                         1. Make yoru NavigationBar Transparent easily
                         2. Adjust your NavigationBar's Transparency, while scrolling
