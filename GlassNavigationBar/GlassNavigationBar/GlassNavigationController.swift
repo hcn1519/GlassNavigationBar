@@ -16,18 +16,28 @@ public struct NavigationOptions {
     var hideBottomHairline: Bool?
     var contentHeight: CGFloat?
     var scrollViewStartOffsetY: CGFloat = 0
+
+    public init(backgroundColor: UIColor?, tintColor: UIColor?, hideBottomHairline: Bool?, contentHeight: CGFloat?,
+                scrollViewStartOffsetY: CGFloat) {
+        self.backgroundColor = backgroundColor
+        self.tintColor = tintColor
+        self.hideBottomHairline = hideBottomHairline
+        self.contentHeight = contentHeight
+        self.scrollViewStartOffsetY = scrollViewStartOffsetY
+    }
 }
 
 extension NavigationOptions {
-    init(backgroundColor: UIColor) {
+
+    public init(backgroundColor: UIColor) {
         self.backgroundColor = backgroundColor
     }
 
-    init(tintColor: UIColor) {
+    public init(tintColor: UIColor) {
         self.tintColor = tintColor
     }
 
-    init(backgroundColor: UIColor?, tintColor: UIColor?, hideBottomHairline: Bool?, contentHeight: CGFloat?) {
+    public init(backgroundColor: UIColor?, tintColor: UIColor?, hideBottomHairline: Bool?, contentHeight: CGFloat?) {
         self.backgroundColor = backgroundColor
         self.tintColor = tintColor
         self.hideBottomHairline = hideBottomHairline
