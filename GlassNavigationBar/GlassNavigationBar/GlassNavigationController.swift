@@ -64,9 +64,10 @@ open class GlassNavigationController: UINavigationController {
     open var titleTextAlpha: CGFloat = 0.0 {
         didSet {
             if adjustTitleTextTransparency {
-                self.setNavigationBarHidden(false, animated: false)
                 self.setTitleColor(color: self.navigationBar.tintColor.withAlphaComponent(titleTextAlpha))
-                self.navigationItem.titleView?.alpha = titleTextAlpha
+                if let viewController = self.topViewController {
+                    viewController.navigationItem.titleView?.alpha = titleTextAlpha
+                }
             }
         }
     }
@@ -83,8 +84,9 @@ open class GlassNavigationController: UINavigationController {
         didSet {
             if adjustTitleTextTransparency {
                 self.setTitleColor(color: self.navigationBar.tintColor.withAlphaComponent(titleTextAlpha))
-                self.navigationItem.titleView?.alpha = titleTextAlpha
-                self.setNavigationBarHidden(true, animated: true)
+                if let viewController = self.topViewController {
+                    viewController.navigationItem.titleView?.alpha = titleTextAlpha
+                }
             }
         }
     }
