@@ -248,7 +248,8 @@ override func viewWillAppear(_ animated: Bool) {
     }
 }
 ```
-`GlassNavigationBar` has `tintColorSet`, `backgroundColorSet` which are typealias of `(UIColor, UIColor)`. Those are startColor and endColor of gradient conversion. Take a look at our demo if you want to know details.
+`GlassNavigationBar` has `tintColorSet`, `backgroundColorSet` properties which are typealias of `(UIColor, UIColor)`. This type indicates the startColor and the endColor of the gradient color. So if you set your `tintColorSet` to `(.blue, .white)`, your navigationbar's tintColor will be changed from blue to white color while scrolling(`contentHeight` will be used here also). Take a look at our demo if you want to know details.
+
 
 ### Property Of GlassNavigationController
 
