@@ -12,9 +12,18 @@ import GlassNavigationBar
 class ScrollViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var bottomButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextButton2: UIButton!
+    @IBOutlet weak var topButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topButton.layer.cornerRadius = 8.0
+        bottomButton.layer.cornerRadius = 8.0
+        nextButton.layer.cornerRadius = 8.0
+        nextButton2.layer.cornerRadius = 8.0
         
         scrollView.delegate = self
         if let navbarController = self.navigationController as? GlassNavigationController {
@@ -45,6 +54,15 @@ class ScrollViewController: UIViewController {
             let options = NavigationOptions(backgroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), tintColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), hideBottomHairline: true, contentHeight: 600)
             navbarController.setNavigationTheme(isTransparent: false, scrollView: scrollView, options: options)
         }
+    }
+    
+    @IBAction func topbtnTapped(_ sender: UIButton) {
+        scrollView.setContentOffset(CGPoint(x: 0, y: -6), animated: true)
+    }
+    
+    @IBAction func bottombtnTapped(_ sender: UIButton) {
+        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+        scrollView.setContentOffset(bottomOffset, animated: true)
     }
 }
 
