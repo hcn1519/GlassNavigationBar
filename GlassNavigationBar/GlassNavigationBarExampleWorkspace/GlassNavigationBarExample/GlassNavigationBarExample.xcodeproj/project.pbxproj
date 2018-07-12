@@ -13,6 +13,8 @@
 		4E3D0F3920F4FE700085D0BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D0F3720F4FE700085D0BC /* LaunchScreen.storyboard */; };
 		4E3D0F4420F4FE700085D0BC /* GlassNavigationBarExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D0F4320F4FE700085D0BC /* GlassNavigationBarExampleTests.swift */; };
 		4E3D0F4F20F711620085D0BC /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D0F4E20F711620085D0BC /* ScrollViewController.swift */; };
+		A846276C28B8F9F0F26A4505 /* libPods-GlassNavigationBarExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EAFC4C2D417CD4459D4036 /* libPods-GlassNavigationBarExampleTests.a */; };
+		B165FCAACC96FBD970F36FB0 /* libPods-GlassNavigationBarExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC228D4EE918BFDEABB15A2 /* libPods-GlassNavigationBarExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15E83F8FE81B2039DAD5EAE6 /* Pods-GlassNavigationBarExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlassNavigationBarExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlassNavigationBarExample/Pods-GlassNavigationBarExample.debug.xcconfig"; sourceTree = "<group>"; };
 		4E3D0F2B20F4FE6E0085D0BC /* GlassNavigationBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlassNavigationBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3D0F2E20F4FE6E0085D0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E3D0F3320F4FE6E0085D0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		4E3D0F4320F4FE700085D0BC /* GlassNavigationBarExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassNavigationBarExampleTests.swift; sourceTree = "<group>"; };
 		4E3D0F4520F4FE700085D0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E3D0F4E20F711620085D0BC /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		6ED22E472AEDD8408A15BE7C /* Pods-GlassNavigationBarExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlassNavigationBarExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlassNavigationBarExample/Pods-GlassNavigationBarExample.release.xcconfig"; sourceTree = "<group>"; };
+		B2EAFC4C2D417CD4459D4036 /* libPods-GlassNavigationBarExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GlassNavigationBarExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC228D4EE918BFDEABB15A2 /* libPods-GlassNavigationBarExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GlassNavigationBarExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E86385E36EF5DC526B7115C6 /* Pods-GlassNavigationBarExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlassNavigationBarExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlassNavigationBarExampleTests/Pods-GlassNavigationBarExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF6E987C544E79B126C69C72 /* Pods-GlassNavigationBarExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlassNavigationBarExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlassNavigationBarExampleTests/Pods-GlassNavigationBarExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B165FCAACC96FBD970F36FB0 /* libPods-GlassNavigationBarExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A846276C28B8F9F0F26A4505 /* libPods-GlassNavigationBarExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ADAE17389E2C2B870223942 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15E83F8FE81B2039DAD5EAE6 /* Pods-GlassNavigationBarExample.debug.xcconfig */,
+				6ED22E472AEDD8408A15BE7C /* Pods-GlassNavigationBarExample.release.xcconfig */,
+				E86385E36EF5DC526B7115C6 /* Pods-GlassNavigationBarExampleTests.debug.xcconfig */,
+				FF6E987C544E79B126C69C72 /* Pods-GlassNavigationBarExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4E3D0F2220F4FE6D0085D0BC = {
 			isa = PBXGroup;
 			children = (
 				4E3D0F2D20F4FE6E0085D0BC /* GlassNavigationBarExample */,
 				4E3D0F4220F4FE700085D0BC /* GlassNavigationBarExampleTests */,
 				4E3D0F2C20F4FE6E0085D0BC /* Products */,
+				4ADAE17389E2C2B870223942 /* Pods */,
+				6A331547088A6E9CCA527EAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +119,15 @@
 			path = GlassNavigationBarExampleTests;
 			sourceTree = "<group>";
 		};
+		6A331547088A6E9CCA527EAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEC228D4EE918BFDEABB15A2 /* libPods-GlassNavigationBarExample.a */,
+				B2EAFC4C2D417CD4459D4036 /* libPods-GlassNavigationBarExampleTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E3D0F4820F4FE700085D0BC /* Build configuration list for PBXNativeTarget "GlassNavigationBarExample" */;
 			buildPhases = (
+				A0A844CE688D214EC88A0097 /* [CP] Check Pods Manifest.lock */,
 				4E3D0F2720F4FE6E0085D0BC /* Sources */,
 				4E3D0F2820F4FE6E0085D0BC /* Frameworks */,
 				4E3D0F2920F4FE6E0085D0BC /* Resources */,
@@ -120,6 +153,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E3D0F4B20F4FE700085D0BC /* Build configuration list for PBXNativeTarget "GlassNavigationBarExampleTests" */;
 			buildPhases = (
+				D89C9A48D0CDC26A45CB1B58 /* [CP] Check Pods Manifest.lock */,
 				4E3D0F3B20F4FE700085D0BC /* Sources */,
 				4E3D0F3C20F4FE700085D0BC /* Frameworks */,
 				4E3D0F3D20F4FE700085D0BC /* Resources */,
@@ -191,6 +225,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0A844CE688D214EC88A0097 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GlassNavigationBarExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D89C9A48D0CDC26A45CB1B58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GlassNavigationBarExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E3D0F2720F4FE6E0085D0BC /* Sources */ = {
@@ -356,15 +429,13 @@
 		};
 		4E3D0F4920F4FE700085D0BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E83F8FE81B2039DAD5EAE6 /* Pods-GlassNavigationBarExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
 				INFOPLIST_FILE = GlassNavigationBarExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcn1519.GlassNavigationBar.GlassNavigationBarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -374,15 +445,13 @@
 		};
 		4E3D0F4A20F4FE700085D0BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ED22E472AEDD8408A15BE7C /* Pods-GlassNavigationBarExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
 				INFOPLIST_FILE = GlassNavigationBarExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcn1519.GlassNavigationBar.GlassNavigationBarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -392,17 +461,14 @@
 		};
 		4E3D0F4C20F4FE700085D0BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E86385E36EF5DC526B7115C6 /* Pods-GlassNavigationBarExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
 				INFOPLIST_FILE = GlassNavigationBarExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcn1519.GlassNavigationBar.GlassNavigationBarExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -413,17 +479,14 @@
 		};
 		4E3D0F4D20F4FE700085D0BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF6E987C544E79B126C69C72 /* Pods-GlassNavigationBarExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
 				INFOPLIST_FILE = GlassNavigationBarExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcn1519.GlassNavigationBar.GlassNavigationBarExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
