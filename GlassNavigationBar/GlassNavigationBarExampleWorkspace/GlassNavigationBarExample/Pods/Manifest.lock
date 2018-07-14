@@ -1,0 +1,16 @@
+PODS:
+  - GlassNavigationBar (0.2.2)
+
+DEPENDENCIES:
+  - GlassNavigationBar
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GlassNavigationBar
+
+SPEC CHECKSUMS:
+  GlassNavigationBar: e969a9b0f189005a87eb7f0beacdb3a973d0c90d
+
+PODFILE CHECKSUM: 8aa2b8bca1a110e5537d0fd506483bcde94f2167
+
+COCOAPODS: 1.5.0

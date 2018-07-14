@@ -1,15 +1,15 @@
 //
-//  GlassNavigationBarTests.swift
-//  GlassNavigationBarTests
+//  GlassNavigationBarExampleTests.swift
+//  GlassNavigationBarExampleTests
 //
-//  Created by 홍창남 on 2018. 5. 20..
-//  Copyright © 2018년 홍창남. All rights reserved.
+//  Created by Seong ho Hong on 2018. 7. 10..
+//  Copyright © 2018년 Seong ho Hong. All rights reserved.
 //
 
 import XCTest
-@testable import GlassNavigationBar
+@testable import GlassNavigationBarExample
 
-class GlassNavigationBarTests: XCTestCase {
+class GlassNavigationBarExampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
