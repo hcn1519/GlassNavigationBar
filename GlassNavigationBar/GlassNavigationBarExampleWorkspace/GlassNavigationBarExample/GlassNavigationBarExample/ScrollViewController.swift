@@ -68,6 +68,10 @@ class ScrollViewController: UIViewController {
     @IBAction func nextBtnTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "goToNextExample", sender: nil)
     }
+    
+    @IBAction func colorExampleBtnTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "colorExample", sender: nil)
+    }
 }
 
 extension ScrollViewController: UIScrollViewDelegate {
