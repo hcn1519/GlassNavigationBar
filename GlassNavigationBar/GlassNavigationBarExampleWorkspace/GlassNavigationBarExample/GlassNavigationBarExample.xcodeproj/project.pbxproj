@@ -13,6 +13,8 @@
 		4E3D0F3920F4FE700085D0BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3D0F3720F4FE700085D0BC /* LaunchScreen.storyboard */; };
 		4E3D0F4420F4FE700085D0BC /* GlassNavigationBarExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D0F4320F4FE700085D0BC /* GlassNavigationBarExampleTests.swift */; };
 		4E3D0F4F20F711620085D0BC /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D0F4E20F711620085D0BC /* ScrollViewController.swift */; };
+		4E3D0F5320F886320085D0BC /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D0F5220F886320085D0BC /* CollectionViewController.swift */; };
+		4E3D0F5520F9EDC90085D0BC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D0F5420F9EDC90085D0BC /* CollectionViewCell.swift */; };
 		A846276C28B8F9F0F26A4505 /* libPods-GlassNavigationBarExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EAFC4C2D417CD4459D4036 /* libPods-GlassNavigationBarExampleTests.a */; };
 		B165FCAACC96FBD970F36FB0 /* libPods-GlassNavigationBarExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC228D4EE918BFDEABB15A2 /* libPods-GlassNavigationBarExample.a */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,8 @@
 		4E3D0F4320F4FE700085D0BC /* GlassNavigationBarExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassNavigationBarExampleTests.swift; sourceTree = "<group>"; };
 		4E3D0F4520F4FE700085D0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E3D0F4E20F711620085D0BC /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		4E3D0F5220F886320085D0BC /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		4E3D0F5420F9EDC90085D0BC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6ED22E472AEDD8408A15BE7C /* Pods-GlassNavigationBarExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlassNavigationBarExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlassNavigationBarExample/Pods-GlassNavigationBarExample.release.xcconfig"; sourceTree = "<group>"; };
 		B2EAFC4C2D417CD4459D4036 /* libPods-GlassNavigationBarExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GlassNavigationBarExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC228D4EE918BFDEABB15A2 /* libPods-GlassNavigationBarExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GlassNavigationBarExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,8 @@
 			children = (
 				4E3D0F2E20F4FE6E0085D0BC /* AppDelegate.swift */,
 				4E3D0F4E20F711620085D0BC /* ScrollViewController.swift */,
+				4E3D0F5220F886320085D0BC /* CollectionViewController.swift */,
+				4E3D0F5420F9EDC90085D0BC /* CollectionViewCell.swift */,
 				4E3D0F3220F4FE6E0085D0BC /* Main.storyboard */,
 				4E3D0F3520F4FE700085D0BC /* Assets.xcassets */,
 				4E3D0F3720F4FE700085D0BC /* LaunchScreen.storyboard */,
@@ -270,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3D0F5320F886320085D0BC /* CollectionViewController.swift in Sources */,
 				4E3D0F4F20F711620085D0BC /* ScrollViewController.swift in Sources */,
+				4E3D0F5520F9EDC90085D0BC /* CollectionViewCell.swift in Sources */,
 				4E3D0F2F20F4FE6E0085D0BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +443,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
 				INFOPLIST_FILE = GlassNavigationBarExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcn1519.GlassNavigationBar.GlassNavigationBarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -451,7 +462,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
 				INFOPLIST_FILE = GlassNavigationBarExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcn1519.GlassNavigationBar.GlassNavigationBarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -468,7 +482,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
 				INFOPLIST_FILE = GlassNavigationBarExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcn1519.GlassNavigationBar.GlassNavigationBarExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -486,7 +504,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
 				INFOPLIST_FILE = GlassNavigationBarExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcn1519.GlassNavigationBar.GlassNavigationBarExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
