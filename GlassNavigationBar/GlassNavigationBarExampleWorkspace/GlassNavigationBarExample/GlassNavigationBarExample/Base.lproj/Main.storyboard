@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -124,14 +125,77 @@
                         <outlet property="nextButton2" destination="iAu-EC-hbt" id="m6l-Gg-sc8"/>
                         <outlet property="scrollView" destination="zLc-LR-dsi" id="xhI-DB-oy4"/>
                         <outlet property="topButton" destination="d9x-je-PSg" id="hXK-JC-2JU"/>
+                        <segue destination="Vlf-ar-X5H" kind="show" id="hOw-Vz-AvS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ue-3u-2f8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="628.33583208395805"/>
         </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="GUs-Ud-CiZ">
+            <objects>
+                <viewController id="Vlf-ar-X5H" customClass="CollectionViewController" customModule="GlassNavigationBarExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y6V-4F-Acc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-bu-kIt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Dw-ID-2zA">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="500"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="L8f-HW-hgS">
+                                        <rect key="frame" x="0.0" y="500" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xJy-gp-Zw9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pineapple-supply-co-262624-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-nK-bX4">
+                                            <rect key="frame" x="8" y="8" width="359" height="484"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dsg-nK-bX4" firstAttribute="top" secondItem="xJy-gp-Zw9" secondAttribute="topMargin" id="2ui-yD-iMj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dsg-nK-bX4" secondAttribute="bottom" id="8U8-Qs-KSh"/>
+                                        <constraint firstItem="dsg-nK-bX4" firstAttribute="leading" secondItem="xJy-gp-Zw9" secondAttribute="leadingMargin" id="UUP-fv-tep"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dsg-nK-bX4" secondAttribute="trailing" id="Wjb-Ht-vQx"/>
+                                    </constraints>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tGI-Bl-9PX" firstAttribute="bottom" secondItem="JQW-bu-kIt" secondAttribute="bottom" id="010-fL-FPg"/>
+                            <constraint firstItem="JQW-bu-kIt" firstAttribute="top" secondItem="y6V-4F-Acc" secondAttribute="top" id="ShF-AJ-vu4"/>
+                            <constraint firstItem="tGI-Bl-9PX" firstAttribute="trailing" secondItem="JQW-bu-kIt" secondAttribute="trailing" id="YDT-fZ-A8s"/>
+                            <constraint firstItem="JQW-bu-kIt" firstAttribute="leading" secondItem="tGI-Bl-9PX" secondAttribute="leading" id="c4h-CG-fbu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tGI-Bl-9PX"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="JQW-bu-kIt" id="oh2-Xq-yRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyK-ek-qBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2181.5999999999999" y="21.139430284857571"/>
+        </scene>
     </scenes>
     <resources>
         <image name="olia-gozha-377160-unsplash" width="3113" height="3800"/>
+        <image name="pineapple-supply-co-262624-unsplash" width="3509" height="5263"/>
     </resources>
 </document>
