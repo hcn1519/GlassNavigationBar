@@ -64,6 +64,10 @@ class ScrollViewController: UIViewController {
         let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
         scrollView.setContentOffset(bottomOffset, animated: true)
     }
+    
+    @IBAction func nextBtnTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToNextExample", sender: nil)
+    }
 }
 
 extension ScrollViewController: UIScrollViewDelegate {
