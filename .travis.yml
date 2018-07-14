@@ -10,10 +10,11 @@ env:
 
 before_install:
   - brew update
-
+  - pod repo update
+  
 script:
   - set -o pipefail
   - git submodule update --init
   - xcodebuild -version
   - xcodebuild -showsdks
-  - xcodebuild -project GlassNavigationBar.xcodeproj -target GlassNavigationBar -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -project GlassNavigationBarExample.xcworkspace -target GlassNavigationBar -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
