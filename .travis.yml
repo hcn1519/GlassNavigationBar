@@ -16,4 +16,4 @@ script:
   - git submodule update --init
   - xcodebuild -version
   - xcodebuild -showsdks
-  - xcodebuild -workspace GlassNavigationBarExample.xcworkspace -target GlassNavigationBarExample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -workspace GlassNavigationBarExample.xcworkspace -scheme GlassNavigationBarExample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
