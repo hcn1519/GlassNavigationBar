@@ -10,6 +10,7 @@ env:
 
 before_install:
   - brew update
+  - pod repo update
 
 script:
   - set -o pipefail
