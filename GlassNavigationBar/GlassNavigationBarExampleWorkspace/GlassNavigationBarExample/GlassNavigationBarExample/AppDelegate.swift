@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  GlassNavigationBar
+//  GlassNavigationBarExample
 //
-//  Created by 홍창남 on 2018. 5. 20..
-//  Copyright © 2018년 홍창남. All rights reserved.
+//  Created by Seong ho Hong on 2018. 7. 10..
+//  Copyright © 2018년 Seong ho Hong. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -40,4 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+
 }
+

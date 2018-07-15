@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		250BF5B76DD268317E5F97792E21FA70 /* GlassNavigationBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A835C52DC01790A31C922ED1EB9CD301 /* GlassNavigationBar-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E0CF6DAE53BEDA53A9F5A5D35F423AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		3853BBD4D0FE048BE709F87DBDA1BBE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		4115391961270EAA680A6B33A6F9B858 /* GlassNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CC45DE79DCB6AEB20235E8740C5191 /* GlassNavigationController.swift */; };
+		4E3D0F5920F9FD840085D0BC /* ColorExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D0F5820F9FD820085D0BC /* ColorExampleViewController.swift */; };
+		530B179974ACD592BA6724A7D04809B5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1597802DB2769D8EBF93789E1D2FBA4 /* UIColor+Extension.swift */; };
+		70F3ABC9DAA7E9DA39D4805FEAC2C3CA /* Pods-GlassNavigationBarExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8854139DC8CD5A8FD4F655357A28869 /* Pods-GlassNavigationBarExample-dummy.m */; };
+		88A9F71C97E76C9D503F3C3CECFD870C /* Pods-GlassNavigationBarExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D512B512FF7C69FD6E8C10722030AAE /* Pods-GlassNavigationBarExampleTests-dummy.m */; };
+		BB339F42765F37B561EFAD238FFD2B2B /* GlassNavigationBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48383A251C3AFFDA23FF27D5C22A76FE /* GlassNavigationBar-dummy.m */; };
+		C4D6BB68CB306EBB9A5E554147709B39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		DD99FEC85B90E4B057AB5796A8A9B9F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		F32EDEBEFEA36A2970AB61C15ADF70A6 /* Pods-GlassNavigationBarExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1619701484C8E2ECF1883AF908DD34BD /* Pods-GlassNavigationBarExample-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BA115998BD9D2786B76B3C2920D40A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8018582EFF2B5B2BC69E677004792694;
+			remoteInfo = GlassNavigationBar;
+		};
+		ABDCF9C761281527C7A68C397C41BC2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A797FD4A268908E424364D3B6D73356D;
+			remoteInfo = "Pods-GlassNavigationBarExample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		025FEE83BEE5E6E8EC8CA4C69E2F21F5 /* Pods-GlassNavigationBarExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GlassNavigationBarExample.modulemap"; sourceTree = "<group>"; };
+		09297C70A7E648064F3C62B265B1B333 /* Pods-GlassNavigationBarExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GlassNavigationBarExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1619701484C8E2ECF1883AF908DD34BD /* Pods-GlassNavigationBarExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GlassNavigationBarExample-umbrella.h"; sourceTree = "<group>"; };
+		1D512B512FF7C69FD6E8C10722030AAE /* Pods-GlassNavigationBarExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GlassNavigationBarExampleTests-dummy.m"; sourceTree = "<group>"; };
+		1FE5843E955590344D29BEA909D02EE3 /* Pods-GlassNavigationBarExampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlassNavigationBarExampleTests-frameworks.sh"; sourceTree = "<group>"; };
+		2FF411C5ED828C4644A4FED4CAEE8914 /* Pods-GlassNavigationBarExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlassNavigationBarExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		33EE1CAF246FFB655143D3AD39BA8B6E /* Pods-GlassNavigationBarExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlassNavigationBarExample.debug.xcconfig"; sourceTree = "<group>"; };
+		46CC45DE79DCB6AEB20235E8740C5191 /* GlassNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlassNavigationController.swift; path = GlassNavigationBar/GlassNavigationBar/GlassNavigationController.swift; sourceTree = "<group>"; };
+		48383A251C3AFFDA23FF27D5C22A76FE /* GlassNavigationBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GlassNavigationBar-dummy.m"; sourceTree = "<group>"; };
+		4DCA16D6D60874EBBCC92C3B0A5EED03 /* Pods-GlassNavigationBarExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GlassNavigationBarExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4E3D0F5820F9FD820085D0BC /* ColorExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorExampleViewController.swift; path = ../GlassNavigationBarExample/ColorExampleViewController.swift; sourceTree = "<group>"; };
+		52A2574C460F0D6CFD2B938DE486384D /* Pods-GlassNavigationBarExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GlassNavigationBarExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		55108DF10A15464FF875262045DF6879 /* GlassNavigationBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GlassNavigationBar-prefix.pch"; sourceTree = "<group>"; };
+		71B9004BBE1FC7E1D80BB431F77C5372 /* GlassNavigationBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GlassNavigationBar.xcconfig; sourceTree = "<group>"; };
+		741C8C095C9F632EB11B68F22675B9BA /* Pods-GlassNavigationBarExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlassNavigationBarExample.release.xcconfig"; sourceTree = "<group>"; };
+		80E4C4F9E6BF1D9668FC900DA8979D73 /* GlassNavigationBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = GlassNavigationBar.modulemap; path = ../../Headers/Public/GlassNavigationBar/GlassNavigationBar.modulemap; sourceTree = "<group>"; };
+		9171EB8A6740449BD6FF976D394EA5ED /* libPods-GlassNavigationBarExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GlassNavigationBarExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		956D68FF47647D1272BFC7C8C74A3A7B /* Pods-GlassNavigationBarExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GlassNavigationBarExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		9DFE12D5E2777648AB8C1D02FC0F1017 /* libGlassNavigationBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlassNavigationBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A835C52DC01790A31C922ED1EB9CD301 /* GlassNavigationBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GlassNavigationBar-umbrella.h"; path = "../../Headers/Public/GlassNavigationBar/GlassNavigationBar-umbrella.h"; sourceTree = "<group>"; };
+		B23A7EA485353A60D24F50499BBA04BB /* Pods-GlassNavigationBarExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlassNavigationBarExample-resources.sh"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CCA144D714461EF744B3F7E6E464A9CD /* Pods-GlassNavigationBarExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlassNavigationBarExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1597802DB2769D8EBF93789E1D2FBA4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "GlassNavigationBar/GlassNavigationBar/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D885EAEC6F76E37FE0CA39605B215E41 /* Pods-GlassNavigationBarExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlassNavigationBarExample-frameworks.sh"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E8854139DC8CD5A8FD4F655357A28869 /* Pods-GlassNavigationBarExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GlassNavigationBarExample-dummy.m"; sourceTree = "<group>"; };
+		F3AAE71F1700675EE34597036807F163 /* libPods-GlassNavigationBarExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GlassNavigationBarExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBD337AADF543378E3BB91F182F8B780 /* Pods-GlassNavigationBarExampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlassNavigationBarExampleTests-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B21DC63BBEE41EB73A243D25D85F01F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0CF6DAE53BEDA53A9F5A5D35F423AB /* Foundation.framework in Frameworks */,
+				C4D6BB68CB306EBB9A5E554147709B39 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C443124B16446737F6E987A603FD02E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD99FEC85B90E4B057AB5796A8A9B9F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26F63862D0EF99D238A71F7CF46A237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3853BBD4D0FE048BE709F87DBDA1BBE9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0622767F13D9640C4A896EA2C2835B41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DFE12D5E2777648AB8C1D02FC0F1017 /* libGlassNavigationBar.a */,
+				F3AAE71F1700675EE34597036807F163 /* libPods-GlassNavigationBarExample.a */,
+				9171EB8A6740449BD6FF976D394EA5ED /* libPods-GlassNavigationBarExampleTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		57003A7DB3A2540F01ABB145D1DE5998 /* Pods-GlassNavigationBarExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DCA16D6D60874EBBCC92C3B0A5EED03 /* Pods-GlassNavigationBarExampleTests-acknowledgements.markdown */,
+				09297C70A7E648064F3C62B265B1B333 /* Pods-GlassNavigationBarExampleTests-acknowledgements.plist */,
+				1D512B512FF7C69FD6E8C10722030AAE /* Pods-GlassNavigationBarExampleTests-dummy.m */,
+				1FE5843E955590344D29BEA909D02EE3 /* Pods-GlassNavigationBarExampleTests-frameworks.sh */,
+				FBD337AADF543378E3BB91F182F8B780 /* Pods-GlassNavigationBarExampleTests-resources.sh */,
+				CCA144D714461EF744B3F7E6E464A9CD /* Pods-GlassNavigationBarExampleTests.debug.xcconfig */,
+				2FF411C5ED828C4644A4FED4CAEE8914 /* Pods-GlassNavigationBarExampleTests.release.xcconfig */,
+			);
+			name = "Pods-GlassNavigationBarExampleTests";
+			path = "Target Support Files/Pods-GlassNavigationBarExampleTests";
+			sourceTree = "<group>";
+		};
+		5B0C3375BD2907FBC50B0272A4FE69D3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				70A1FA06F36C3C8E22DFBD8CFC1D2E8B /* Pods-GlassNavigationBarExample */,
+				57003A7DB3A2540F01ABB145D1DE5998 /* Pods-GlassNavigationBarExampleTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		70A1FA06F36C3C8E22DFBD8CFC1D2E8B /* Pods-GlassNavigationBarExample */ = {
+			isa = PBXGroup;
+			children = (
+				025FEE83BEE5E6E8EC8CA4C69E2F21F5 /* Pods-GlassNavigationBarExample.modulemap */,
+				52A2574C460F0D6CFD2B938DE486384D /* Pods-GlassNavigationBarExample-acknowledgements.markdown */,
+				956D68FF47647D1272BFC7C8C74A3A7B /* Pods-GlassNavigationBarExample-acknowledgements.plist */,
+				E8854139DC8CD5A8FD4F655357A28869 /* Pods-GlassNavigationBarExample-dummy.m */,
+				D885EAEC6F76E37FE0CA39605B215E41 /* Pods-GlassNavigationBarExample-frameworks.sh */,
+				B23A7EA485353A60D24F50499BBA04BB /* Pods-GlassNavigationBarExample-resources.sh */,
+				1619701484C8E2ECF1883AF908DD34BD /* Pods-GlassNavigationBarExample-umbrella.h */,
+				33EE1CAF246FFB655143D3AD39BA8B6E /* Pods-GlassNavigationBarExample.debug.xcconfig */,
+				741C8C095C9F632EB11B68F22675B9BA /* Pods-GlassNavigationBarExample.release.xcconfig */,
+			);
+			name = "Pods-GlassNavigationBarExample";
+			path = "Target Support Files/Pods-GlassNavigationBarExample";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				4E3D0F5820F9FD820085D0BC /* ColorExampleViewController.swift */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				E14D812EB11C2FA0C93E8095D92F814C /* Pods */,
+				0622767F13D9640C4A896EA2C2835B41 /* Products */,
+				5B0C3375BD2907FBC50B0272A4FE69D3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		85B242A3595A2896D433803EF2A21BB2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				80E4C4F9E6BF1D9668FC900DA8979D73 /* GlassNavigationBar.modulemap */,
+				71B9004BBE1FC7E1D80BB431F77C5372 /* GlassNavigationBar.xcconfig */,
+				48383A251C3AFFDA23FF27D5C22A76FE /* GlassNavigationBar-dummy.m */,
+				55108DF10A15464FF875262045DF6879 /* GlassNavigationBar-prefix.pch */,
+				A835C52DC01790A31C922ED1EB9CD301 /* GlassNavigationBar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GlassNavigationBar";
+			sourceTree = "<group>";
+		};
+		B47B57E4DEADFD54DDCDF2D78E1A01FD /* GlassNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				46CC45DE79DCB6AEB20235E8740C5191 /* GlassNavigationController.swift */,
+				D1597802DB2769D8EBF93789E1D2FBA4 /* UIColor+Extension.swift */,
+				85B242A3595A2896D433803EF2A21BB2 /* Support Files */,
+			);
+			path = GlassNavigationBar;
+			sourceTree = "<group>";
+		};
+		E14D812EB11C2FA0C93E8095D92F814C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B47B57E4DEADFD54DDCDF2D78E1A01FD /* GlassNavigationBar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C0EDD2C3C9EAED52E004BC4A7ADF008E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F32EDEBEFEA36A2970AB61C15ADF70A6 /* Pods-GlassNavigationBarExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E94A743C4F13317FCE701926920C8C44 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250BF5B76DD268317E5F97792E21FA70 /* GlassNavigationBar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		63C4DDF5BE76075990694CA710B8FFBE /* Pods-GlassNavigationBarExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807E1E87A682C14E2BE90A7CC5AD5078 /* Build configuration list for PBXNativeTarget "Pods-GlassNavigationBarExampleTests" */;
+			buildPhases = (
+				CF3647654AAA8C1DBAA7E6CCB8B453C7 /* Sources */,
+				D26F63862D0EF99D238A71F7CF46A237 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A014709279BCCC8CA7D241904B4BF474 /* PBXTargetDependency */,
+			);
+			name = "Pods-GlassNavigationBarExampleTests";
+			productName = "Pods-GlassNavigationBarExampleTests";
+			productReference = 9171EB8A6740449BD6FF976D394EA5ED /* libPods-GlassNavigationBarExampleTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8018582EFF2B5B2BC69E677004792694 /* GlassNavigationBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C3D8B56851B6A24CD8C4003E01DEF3B /* Build configuration list for PBXNativeTarget "GlassNavigationBar" */;
+			buildPhases = (
+				397B9835A61EB952351F1836306A85C7 /* Sources */,
+				2B21DC63BBEE41EB73A243D25D85F01F /* Frameworks */,
+				E94A743C4F13317FCE701926920C8C44 /* Headers */,
+				0C6E92DD0E44C59C0BCE8DFD824CC3AF /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlassNavigationBar;
+			productName = GlassNavigationBar;
+			productReference = 9DFE12D5E2777648AB8C1D02FC0F1017 /* libGlassNavigationBar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A797FD4A268908E424364D3B6D73356D /* Pods-GlassNavigationBarExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C3C0ED2DBBD3CE8C96C6103100B0AA4 /* Build configuration list for PBXNativeTarget "Pods-GlassNavigationBarExample" */;
+			buildPhases = (
+				128692E3958F46A9E65DB377937B8F82 /* Sources */,
+				3C443124B16446737F6E987A603FD02E /* Frameworks */,
+				C0EDD2C3C9EAED52E004BC4A7ADF008E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CECDB0B2E56B0F4114108ECB77CBFB7 /* PBXTargetDependency */,
+			);
+			name = "Pods-GlassNavigationBarExample";
+			productName = "Pods-GlassNavigationBarExample";
+			productReference = F3AAE71F1700675EE34597036807F163 /* libPods-GlassNavigationBarExample.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0940;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 0622767F13D9640C4A896EA2C2835B41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8018582EFF2B5B2BC69E677004792694 /* GlassNavigationBar */,
+				A797FD4A268908E424364D3B6D73356D /* Pods-GlassNavigationBarExample */,
+				63C4DDF5BE76075990694CA710B8FFBE /* Pods-GlassNavigationBarExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C6E92DD0E44C59C0BCE8DFD824CC3AF /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/GlassNavigationBar/GlassNavigationBar.modulemap",
+				"${PODS_ROOT}/Headers/Public/GlassNavigationBar/GlassNavigationBar-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/GlassNavigationBar-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/GlassNavigationBar/GlassNavigationBar.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/GlassNavigationBar/GlassNavigationBar-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		128692E3958F46A9E65DB377937B8F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70F3ABC9DAA7E9DA39D4805FEAC2C3CA /* Pods-GlassNavigationBarExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		397B9835A61EB952351F1836306A85C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB339F42765F37B561EFAD238FFD2B2B /* GlassNavigationBar-dummy.m in Sources */,
+				4115391961270EAA680A6B33A6F9B858 /* GlassNavigationController.swift in Sources */,
+				4E3D0F5920F9FD840085D0BC /* ColorExampleViewController.swift in Sources */,
+				530B179974ACD592BA6724A7D04809B5 /* UIColor+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3647654AAA8C1DBAA7E6CCB8B453C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A9F71C97E76C9D503F3C3CECFD870C /* Pods-GlassNavigationBarExampleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CECDB0B2E56B0F4114108ECB77CBFB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GlassNavigationBar;
+			target = 8018582EFF2B5B2BC69E677004792694 /* GlassNavigationBar */;
+			targetProxy = 1BA115998BD9D2786B76B3C2920D40A5 /* PBXContainerItemProxy */;
+		};
+		A014709279BCCC8CA7D241904B4BF474 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GlassNavigationBarExample";
+			target = A797FD4A268908E424364D3B6D73356D /* Pods-GlassNavigationBarExample */;
+			targetProxy = ABDCF9C761281527C7A68C397C41BC2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00B3BC3FF15EEC556B426BE698B49A0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71B9004BBE1FC7E1D80BB431F77C5372 /* GlassNavigationBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GlassNavigationBar/GlassNavigationBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/GlassNavigationBar/GlassNavigationBar.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GlassNavigationBar;
+				PRODUCT_NAME = GlassNavigationBar;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2032B35D533680D8DA4C481588761012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EE1CAF246FFB655143D3AD39BA8B6E /* Pods-GlassNavigationBarExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GlassNavigationBarExample/Pods-GlassNavigationBarExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26155A0CE788C135F2C55D6AE66794FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 741C8C095C9F632EB11B68F22675B9BA /* Pods-GlassNavigationBarExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GlassNavigationBarExample/Pods-GlassNavigationBarExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B16D8C812A5895F855FB24A06A22D84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71B9004BBE1FC7E1D80BB431F77C5372 /* GlassNavigationBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GlassNavigationBar/GlassNavigationBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/GlassNavigationBar/GlassNavigationBar.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GlassNavigationBar;
+				PRODUCT_NAME = GlassNavigationBar;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8DCA53E99A9815A00CF1C85AC53E972A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FF411C5ED828C4644A4FED4CAEE8914 /* Pods-GlassNavigationBarExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		DE568981CBE58563FDA1BA7929DF50F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCA144D714461EF744B3F7E6E464A9CD /* Pods-GlassNavigationBarExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C3C0ED2DBBD3CE8C96C6103100B0AA4 /* Build configuration list for PBXNativeTarget "Pods-GlassNavigationBarExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2032B35D533680D8DA4C481588761012 /* Debug */,
+				26155A0CE788C135F2C55D6AE66794FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807E1E87A682C14E2BE90A7CC5AD5078 /* Build configuration list for PBXNativeTarget "Pods-GlassNavigationBarExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE568981CBE58563FDA1BA7929DF50F2 /* Debug */,
+				8DCA53E99A9815A00CF1C85AC53E972A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C3D8B56851B6A24CD8C4003E01DEF3B /* Build configuration list for PBXNativeTarget "GlassNavigationBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B3BC3FF15EEC556B426BE698B49A0B /* Debug */,
+				2B16D8C812A5895F855FB24A06A22D84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

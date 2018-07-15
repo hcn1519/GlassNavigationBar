@@ -1,16 +1,16 @@
 //
 //  CollectionViewCell.swift
-//  GlassNavigationBar
+//  GlassNavigationBarExample
 //
-//  Created by 홍창남 on 2018. 5. 20..
-//  Copyright © 2018년 홍창남. All rights reserved.
+//  Created by Seong ho Hong on 2018. 7. 14..
+//  Copyright © 2018년 Seong ho Hong. All rights reserved.
 //
 
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var colorView: UIView!
+    
+    @IBOutlet weak var colorView: CollectionViewCell!
 }
 
 extension CGFloat {

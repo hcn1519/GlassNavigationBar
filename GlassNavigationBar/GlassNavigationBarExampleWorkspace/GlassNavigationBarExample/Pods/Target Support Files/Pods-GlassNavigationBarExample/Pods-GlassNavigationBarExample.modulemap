@@ -1,0 +1,6 @@
+module Pods_GlassNavigationBarExample [system] {
+  umbrella header "Pods-GlassNavigationBarExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

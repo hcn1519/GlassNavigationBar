@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode9.3
-xcode_project: GlassNavigationBar.xcodeproj
-xcode_scheme: GlassNavigationBar
+xcode_project: GlassNavigationBarExample.xcworkspace
+xcode_scheme: GlassNavigationBarExample
 xcode_sdk: iphonesimulator11.3
 sudo: required
 
@@ -16,4 +16,4 @@ script:
   - git submodule update --init
   - xcodebuild -version
   - xcodebuild -showsdks
-  - xcodebuild -project GlassNavigationBar.xcodeproj -target GlassNavigationBar -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -workspace GlassNavigationBarExample.xcworkspace -target GlassNavigationBarExample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
