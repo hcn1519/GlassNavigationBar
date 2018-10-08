@@ -1,8 +1,8 @@
 language: swift
-osx_image: xcode9.3
+osx_image: xcode10
 xcode_project: GlassNavigationBar.xcodeproj
 xcode_scheme: GlassNavigationBar
-xcode_sdk: iphonesimulator11.3
+xcode_sdk: iphonesimulator12.0
 sudo: required
 
 env:
