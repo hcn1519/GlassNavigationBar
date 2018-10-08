@@ -116,7 +116,7 @@ open class GlassNavigationController: UINavigationController {
 
     public func setTitleColor(color: UIColor) {
         self.navigationBar.barStyle = .default
-        let textAttributes = [NSAttributedStringKey.foregroundColor: color]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: color]
         self.navigationBar.titleTextAttributes = textAttributes
 
         if #available(iOS 11.0, *) {
@@ -124,7 +124,7 @@ open class GlassNavigationController: UINavigationController {
         }
     }
 
-    public func setTitleAttribute(attribute: [NSAttributedStringKey: Any]) {
+    public func setTitleAttribute(attribute: [NSAttributedString.Key: Any]) {
         self.navigationBar.barStyle = .default
         self.navigationBar.titleTextAttributes = attribute
 
@@ -272,7 +272,7 @@ extension GlassNavigationController: UIScrollViewDelegate {
         if let tintColorSet = tintColorSet {
             let tintColor = UIColor.setGradient(colorSet: tintColorSet, totalLength: length, current: offsetY)
             self.navigationBar.tintColor = tintColor
-            self.setTitleAttribute(attribute: [NSAttributedStringKey.foregroundColor: tintColor])
+            self.setTitleAttribute(attribute: [NSAttributedString.Key.foregroundColor: tintColor])
         }
     }
 }
