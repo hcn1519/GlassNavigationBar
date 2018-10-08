@@ -5,7 +5,7 @@
 #  Glass Navigation Bar
 
 [![Build](https://travis-ci.com/hcn1519/GlassNavigationBar.svg?branch=master)](https://travis-ci.com/hcn1519/GlassNavigationBar)
-[![Swift 4.1](https://img.shields.io/badge/Swift-4.1-%23FB613C.svg)](https://developer.apple.com/swift/)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-%23FB613C.svg)](https://developer.apple.com/swift/)
 [![Version](https://cocoapod-badges.herokuapp.com/v/GlassNavigationBar/badge.png)](https://github.com/hcn1519/GlassNavigationBar)
 [![platform](https://cocoapod-badges.herokuapp.com/p/GlassNavigationBar/badge.png)](https://github.com/hcn1519/GlassNavigationBar)
 [![License](https://cocoapod-badges.herokuapp.com/l/GlassNavigationBar/badge.png)](https://github.com/hcn1519/GlassNavigationBar)
